@@ -6,13 +6,13 @@ Items that are open and need to be picked up. Remove when done, add when identif
 
 ---
 
-## In Progress This Session
+## Shipped 2026-05-03
 
-- [ ] Memory repo setup (this repo) — wiring fetch + push
-- [ ] Session-start health check in Ren skill
-- [ ] Curator-context summary layer
-- [ ] Cloudflare auto-deploy hook
-- [ ] Scheduled maintenance agent design
+- [x] Memory repo setup — ren-memory created, context.md + pending.md + curator-summary.md
+- [x] Session-start fetch wired into Ren skill
+- [x] Curator-context summary layer (curator-summary.md)
+- [x] Cloudflare auto-deploy hook (Stop hook)
+- [x] Scheduled maintenance agent — daily 8am, macOS notification, working
 
 ---
 
