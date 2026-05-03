@@ -18,7 +18,7 @@ Items that are open and need to be picked up. Remove when done, add when identif
 
 ## Framework — Sub-Agents
 
-- [ ] Design comms cascade sub-agent (first new sub-agent instance, sets the pattern)
+- [x] Comms cascade sub-agent — shipped v2.0.0, first real run successful
 - [ ] Audit all framework skills for sub-agent opportunities
 - [ ] Design-review Enhanced Mode → make default, not gated
 - [ ] Sub-agent pattern doc for framework (how skills invoke them, output contract)
