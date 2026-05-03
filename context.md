@@ -1,37 +1,42 @@
 # Ren — Session Context
 
 **Last updated:** 2026-05-03
-**Framework version:** v1.9.0
+**Framework version:** v2.1.0
 **Updated by:** Ren (session closeout)
 
 ---
 
 ## Current State
 
-The Solo Builder Framework is actively maintained and in good health. The most recent major work (May 1–2) closed significant quality and observability gaps.
+The Solo Builder Framework is in excellent health. Sub-agent capabilities are now wired across four core skills. Ren memory infrastructure is fully operational. A new companion build cycle has been formally opened.
 
 ---
 
 ## Recent Sessions
 
-### 2026-05-03
+### 2026-05-03 (this session)
+- v2.0.0: Ren memory infrastructure — ren-memory repo created, cross-device context, curator-summary layer, Stop hooks (diary reminder fixed, ren-memory push, Cloudflare auto-deploy), daily 8am health check routine
+- v2.0.0: Comms cascade sub-agent — full skill built, blog HTML CSS fix (3 entries with broken p-tag formatting), auto-commit+push+deploy
+- v2.1.0: Sub-agent wiring — design-review (Enhanced Mode auto, no explicit activation), phase-test (Stages 4+5 concurrent), design-sprint (secondary screens parallel fanout + consistency pass), solo-build (code-review as isolated sub-agent)
+- Parallel pipeline design session — full model designed: process group as planning unit, start soft prompt, explicit invoke writes Pipeline mode to handoff.md, phase test still end-to-end
+- Companion board: brainstorm doc written, committed to solo-companion repo, new cycle ready to open
+- Framework: parallel pipeline skill design logged in shared/ideas.md (supersedes April 30 item)
+
+### 2026-05-03 (earlier)
 - Diagnosed missing May 2 diary entry (Stop hook cwd miss — fixed)
-- Wrote reconstructed May 2 diary entry to MemPalace
-- Created ren-memory repo (this repo) — cross-device session context
+- Created ren-memory repo — cross-device session context
 - Wired session-start fetch and session-end push into Ren workflow
 
 ### 2026-05-02
 - v1.7.0: Automated test generation, CI/CD pipeline integration, 7 deployment paths
-- v1.8.0: Project-level metrics collection (docs/metrics.json auto-produced every build), rework cycle detection
-- v1.8.0 addendum: Slice quality checks — prd-to-plan quality scan at plan approval, solo-build pre-flight at branch open
-- v1.9.0: Solo Companion Search + Capture (two-pass MemPalace engine, markdown rendering, write from companion)
-- client-context-design skill added — clients registry, auto-hook at design sprint start
+- v1.8.0: Project-level metrics collection (docs/metrics.json), rework cycle detection
+- v1.8.0 addendum: Slice quality checks — prd-to-plan quality scan, solo-build pre-flight
+- v1.9.0: Solo Companion Search + Capture (two-pass MemPalace engine, write from companion)
+- client-context-design skill — clients registry, auto-hook at design sprint start
 
 ### 2026-05-01
-- Quality gate overhaul — design-review: 4-category quality contract required (failure states, edge cases, input validation, security)
-- solo-build: contract steps in build plan, step 1 self-verification walks observable contract items
-- code-review Check 9 security baseline: 5 fixed sub-checks independent of contract, runs every slice
-- All comms docs updated, committed, pushed, deployed to Cloudflare
+- Quality gate overhaul — 4-category quality contract, solo-build self-verification, code-review Check 9 security baseline
+- All comms docs updated, committed, pushed, deployed
 
 ---
 
@@ -51,6 +56,7 @@ These don't change session to session — only update when a decision is explici
 - **Comms deploy:** every change to `docs/communications/**` must push to GitHub AND deploy to Cloudflare in same pass
 - **Verbatim quote required** at solo-build Step 0 — paraphrase invalid, closes memory loophole
 - **Check 9 security** runs every slice regardless of quality contract content
+- **Sub-agents automatic:** design-review Enhanced Mode fires when Agent tool available — no manual activation
 - **Ren diary:** write to MemPalace at every session end, agent name: `ren`
 - **MemPalace CLI:** `/Users/scottheinemeier/Apps/.venv/bin/mempalace` (use `zsh -l -c` if PATH issues)
 
@@ -59,6 +65,6 @@ These don't change session to session — only update when a decision is explici
 ## Framework Health Indicators
 
 - Last `mempalace mine` run: 2026-05-01
-- Last Cloudflare deploy: 2026-05-01
-- Last diary entry: 2026-05-03 (reconstructed May 2 entry)
+- Last Cloudflare deploy: 2026-05-03 (v2.1.0 comms cascade)
+- Last diary entry: 2026-05-03
 - Open framework gaps: none known

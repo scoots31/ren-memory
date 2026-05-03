@@ -13,29 +13,39 @@ Items that are open and need to be picked up. Remove when done, add when identif
 - [x] Curator-context summary layer (curator-summary.md)
 - [x] Cloudflare auto-deploy hook (Stop hook)
 - [x] Scheduled maintenance agent — daily 8am, macOS notification, working
-
----
-
-## Framework — Sub-Agents
-
 - [x] Comms cascade sub-agent — shipped v2.0.0, first real run successful
-- [ ] Audit all framework skills for sub-agent opportunities
-- [ ] Design-review Enhanced Mode → make default, not gated
-- [ ] Sub-agent pattern doc for framework (how skills invoke them, output contract)
+- [x] Sub-agent wiring — design-review, phase-test, design-sprint, solo-build — v2.1.0 shipped
+- [x] Parallel pipeline design session — model fully designed, logged in shared/ideas.md
+- [x] Companion board brainstorm — doc written, committed, new cycle ready to open
 
 ---
 
-## Framework — Deferred from April/May Sessions
+## Framework — Needs Design Session
 
-- [ ] Parallel pipeline design session (items 5+6 from April 30)
-- [ ] prd-to-plan fold — design session required first
-- [ ] start skill: lighter reentry path
-- [ ] discover skill: lighter path option
-- [ ] design-sprint: wireframe-first option
+- [ ] Parallel pipeline framework skills — start soft prompt, Pipeline mode field in handoff.md, records-spec update. Design logged in shared/ideas.md. Execute after companion board ships or independently.
+- [ ] prd-to-plan fold — design session required, linked to parallel pipeline item (shared/ideas.md)
+
+---
+
+## Framework — Approved, Ready to Execute
+
+- [ ] Start: lighter re-entry read (shared/ideas.md)
+- [ ] Discover: lighter path for clear problems (shared/ideas.md)
+- [ ] Product-continuity: lazy docs — check sync.py + parsers.py first (shared/ideas.md)
+
+---
+
+## Framework — Deferred / Backlog
+
 - [ ] solo-build: session limit guardrail
 - [ ] retro: curator path
 - [ ] deploy: auto-detect platform
-- [ ] product-continuity: lazy docs — check sync.py + parsers.py first
+
+---
+
+## Solo Companion — New Cycle Ready
+
+- [ ] Board view (kanban) — brainstorm done, ready for discover. Say "guided on solo-companion" to open the new cycle.
 
 ---
 
