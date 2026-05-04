@@ -137,6 +137,22 @@ Work done in moment one directly reduces pain in moment two. For a solo builder 
 
 ---
 
+## AI Design Principle
+
+**The module is AI-compatible, not AI-dependent.**
+
+Deterministic logic handles everything it can — schema reads, field type comparisons, gap detection, translation rule execution, routing and replication. Where interpretation is needed (understanding what a conflict means, suggesting likely mappings, guiding non-technical users through yellow decisions), the module exports a structured brief. The user takes that to their AI tool of choice. Results come back in. The module continues.
+
+**The export format is a feature.** It needs to be a well-formed brief — two schemas, the conflicts, the fields needing interpretation — not a raw data dump. A good export makes the AI analysis genuinely useful rather than generic.
+
+**Why this boundary:**
+- No inference costs carried by the product
+- No provider lock-in — AI landscape changes fast
+- No data privacy liability — customer chose their tool, they own that relationship
+- More approachable for SMB buyers than a proprietary AI feature they have to trust and pay for
+
+---
+
 ## Open Questions / Next Steps
 
 - What's the MVP scope — chain mode first, with router as the simpler predecessor?
