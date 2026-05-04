@@ -1,15 +1,22 @@
-# Ren Health Check — 2026-05-03 10:03
+# Ren Health Check — 2026-05-04 08:06
 
 ## ren-memory context.md
 **Last updated:** 2026-05-03
-**Framework version:** v1.9.0
-- Last Cloudflare deploy: 2026-05-01
-- Last diary entry: 2026-05-03 (reconstructed May 2 entry)
+**Framework version:** v2.1.0
+- Last Cloudflare deploy: 2026-05-03 (v2.1.0 comms cascade)
+- Last diary entry: 2026-05-03
 
 ## Pending items
-Open: 21
+Open: 12
 
 ## engineering-playbook recent commits
+c268273 log parallel pipeline framework skill design — approved, needs design session
+75581d6 design-sprint: add consistency pass after parallel secondary screen build
+e2d54ea v2.1.0 — comms cascade
+9ed2d87 v2.1.0 — sub-agent wiring across four framework skills
+a147182 Fix blog entry formatting — remove intro paragraphs, correct change-list structure; update comms-cascade template
+ca7b0bf v2.0.0 — comms cascade
+ce0e346 v2.0.0 — Comms cascade sub-agent + Ren memory infrastructure
 f31df20 ren: read curator-summary.md instead of full curator-context by default
 e453b78 ren: fetch ren-memory repo at session start, lazy-load curator-context
 a17161f Add client-context-design skill, clients registry, and design-sprint client context hook
