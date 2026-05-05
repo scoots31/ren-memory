@@ -26,6 +26,13 @@ Items that are open and need to be picked up. Remove when done, add when identif
 - [x] Weekly Anthropic release notes monitor (scheduled task, ren-memory/release-notes-scan.md)
 - [x] v2.3.0 — Security classification (6 classes, tech-context through Check 9)
 - [x] Solo Companion viewer JS bug fix — slice overlay ternary syntax error
+- [x] v2.5.0 — Solo Companion Board View (kanban, local + cloud, Phase 6 complete)
+- [x] Design library bundled subset — 500 entries (25MB) shipped in repo via trim.py; full 1322 gitignored
+- [x] Public APIs reference — tech-context Q5 silent check before any external API dependency
+- [x] Comms cascade — v2.4.0 Design Identity + v2.5.0 Board View blog entries live
+- [x] Han Solo — strategic product vision documented in shared/ideas.md + MemPalace, 4 design sessions defined
+- [x] Marketing workflow idea — documented in shared/ideas.md + MemPalace
+- [x] curator-summary.md — updated to v2.4.0
 
 ## Framework — Needs Design Session
 
@@ -52,7 +59,7 @@ Items that are open and need to be picked up. Remove when done, add when identif
 
 ## Solo Companion — New Cycle Ready
 
-- [ ] Board view (kanban) — brainstorm done, ready for discover. Say "guided on solo-companion" to open the new cycle.
+- [x] Board view (kanban) — shipped v2.5.0, Phase 6 complete 2026-05-05
 
 ---
 

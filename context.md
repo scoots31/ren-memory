@@ -14,6 +14,15 @@ The Solo Builder Framework is in excellent health. v2.4.0 shipped — Design Ide
 
 ## Recent Sessions
 
+### 2026-05-05 (session 3)
+- v2.5.0: Solo Companion Board View shipped — Phase 6 complete, kanban in local app (/board) and cloud viewer, comms cascade deployed
+- Design library bundled subset — trim.py produces 500-entry styles-bundled.json (25MB) for repo; full styles.json gitignored; search.py auto-selects
+- Public APIs reference wired into tech-context Q5 — silent check before any external API dependency recorded
+- Comms cascade — v2.4.0 Design Identity blog entry + v2.5.0 Board View entry live at sbf-framework-docs.pages.dev
+- Han Solo — strategic product vision documented: framework-as-owned-application, BYOK SaaS model, Scott+Ted private first, 4 design sessions defined. Codename private to Scott+Ren only
+- Marketing workflow — post-deploy skill idea documented in shared/ideas.md + MemPalace
+- curator-summary.md updated to v2.4.0
+
 ### 2026-05-05 (continued)
 - v2.4.0: Design Identity — design library (1,322 Refero styles seeded), search.py, extract.py, design-sprint Step 2 rewritten as library search → 3 options → design-identity.md, design-review reads design-identity.md and flags north star drift
 - Weekly Anthropic release notes monitor — scheduled task Monday 8am, categorizes Act/Watch/Skip, writes to ren-memory/release-notes-scan.md
