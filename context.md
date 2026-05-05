@@ -1,20 +1,25 @@
 # Ren — Session Context
 
 **Last updated:** 2026-05-05
-**Framework version:** v2.3.0
+**Framework version:** v2.4.0
 **Updated by:** Ren (session closeout)
 
 ---
 
 ## Current State
 
-The Solo Builder Framework is in excellent health. v2.3.0 shipped — security classification is now a first-class framework concept. Six classes (Personal, Financial, Authentication, Multi-tenant, Confidential, Regulated) declared at tech-context and enforced through design sprint, solo-build pre-flight, and an expanded Check 9 (9a–9t). Also: fixed a critical Solo Companion bug (broken JS syntax in slice overlay killed the entire viewer). Kanban board build is active in a parallel session.
+The Solo Builder Framework is in excellent health. v2.4.0 shipped — Design Identity is now a first-class framework concept. A local design reference library of 1,322+ curated styles (seeded from Refero API) powers a library search step at design sprint start. The solo sees 3 reference directions with north star phrases, picks one, and the framework writes docs/design/design-identity.md — the design anchor checked by every screen in the sprint and every design review round. The library grows via extract.py (any URL → CSS extraction + Claude-generated north star). Weekly Anthropic release notes monitor also wired (scheduled task, Monday 8am, writes to ren-memory/release-notes-scan.md).
 
 ---
 
 ## Recent Sessions
 
-### 2026-05-05 (this session)
+### 2026-05-05 (continued)
+- v2.4.0: Design Identity — design library (1,322 Refero styles seeded), search.py, extract.py, design-sprint Step 2 rewritten as library search → 3 options → design-identity.md, design-review reads design-identity.md and flags north star drift
+- Weekly Anthropic release notes monitor — scheduled task Monday 8am, categorizes Act/Watch/Skip, writes to ren-memory/release-notes-scan.md
+- Feedback memory: Scott surfaces new Anthropic capabilities from social/docs, receive as genuine new info
+
+### 2026-05-05 (earlier)
 - Fixed Solo Companion viewer JS syntax error (broken ternary in slice overlay — `:'}'` instead of `:''}` — killed the entire page)
 - v2.3.0: Security classification — 6 classes declared at tech-context, enforced through design sprint (process-mapper gaps), solo-build pre-flight (quality contract check), and Check 9 (9a–9t, class-specific sub-checks). Regulated class gets acknowledgment gate + deploy hard stop.
 - Comms cascade deployed — blog, skills-reference, guide-build, guide-design-sprint updated at sbf-framework-docs.pages.dev

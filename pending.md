@@ -22,6 +22,8 @@ Items that are open and need to be picked up. Remove when done, add when identif
 
 ## Shipped 2026-05-05
 
+- [x] v2.4.0 — Design Identity (design library 1322 styles, search.py, extract.py, design-sprint Step 2, design-review north star check)
+- [x] Weekly Anthropic release notes monitor (scheduled task, ren-memory/release-notes-scan.md)
 - [x] v2.3.0 — Security classification (6 classes, tech-context through Check 9)
 - [x] Solo Companion viewer JS bug fix — slice overlay ternary syntax error
 
