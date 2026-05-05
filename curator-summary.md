@@ -4,14 +4,14 @@
 Read the full file only when a specific framework decision requires the detailed reasoning.
 
 **Full file:** `~/Developer/engineering-playbook/docs/curator-context.md`
-**Last synced:** 2026-05-03
+**Last synced:** 2026-05-05
 
 ---
 
 ## Current Framework Version
 
-**v1.9.0** — Solo Companion Search and Capture
-Released: 2026-05-02
+**v2.4.0** — Design Identity
+Released: 2026-05-05
 
 ---
 
@@ -92,6 +92,13 @@ Process anchor: [to-be map file] → [step name] → [main path / branch / excep
 
 | Date | Decision |
 |---|---|
+| 2026-05-05 | v2.4.0: Design Identity — design-library (1,322 Refero styles + extractor), search.py, design-sprint Step 2 rewritten as library search → 3 options → design-identity.md, design-review reads north star drift |
+| 2026-05-05 | Weekly Anthropic release notes monitor — scheduled task Monday 8am, categorizes Act/Watch/Skip, writes to ren-memory/release-notes-scan.md |
+| 2026-05-05 | Public APIs reference added to tech-context Q5 — silent check before recording any external API dependency |
+| 2026-05-03 | v2.3.0: Security classification — 6 classes declared at tech-context, enforced through design sprint, solo-build pre-flight, and Check 9 (9a–9t class-specific sub-checks). Regulated class gets acknowledgment gate + deploy hard stop |
+| 2026-05-03 | v2.1.0: Sub-agent wiring — design-review Enhanced Mode auto (no manual activation), phase-test Stages 4+5 concurrent, design-sprint secondary screens parallel fanout + consistency pass, solo-build code-review as isolated sub-agent |
+| 2026-05-03 | v2.0.0: Ren memory infrastructure — ren-memory repo, context.md, curator-summary.md, Stop hooks (diary, push, Cloudflare deploy), daily 8am health check |
+| 2026-05-03 | v2.0.0: Comms cascade sub-agent — full skill, auto-commit+push+deploy in one pass |
 | 2026-05-02 | v1.9.0: Solo Companion Search + Capture (two-pass MemPalace engine, markdown rendering, write from companion) |
 | 2026-05-02 | v1.8.0: metrics.json auto-produced every build. Rework cycle detection. |
 | 2026-05-02 | Slice quality scan at plan approval — soft slices rejected before build starts |
