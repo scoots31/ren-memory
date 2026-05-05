@@ -1,4 +1,4 @@
-# Ren Health Check — 2026-05-04 08:06
+# Ren Health Check — 2026-05-05 08:05
 
 ## ren-memory context.md
 **Last updated:** 2026-05-03
@@ -10,6 +10,8 @@
 Open: 12
 
 ## engineering-playbook recent commits
+da493b9 v2.2.0 — comms cascade
+cd81875 v2.2.0 — Leaf node / core architecture classification + architecture type gate
 c268273 log parallel pipeline framework skill design — approved, needs design session
 75581d6 design-sprint: add consistency pass after parallel secondary screen build
 e2d54ea v2.1.0 — comms cascade
@@ -160,10 +162,5 @@ c5942f1 Add index.html landing page and robots.txt for surge deployment
 527dd24 Update to-issues skill card in skills-reference with full SKILL.md content
 064ba43 Repo audit + setup improvements for portability
 6fdb816 Update README and Cursor User Rules for portable setup
-2abdf0a Add communications suite: process map, business deck, solo deck, skills reference
-547afa2 Add process-mapper integration to design-review
-4991ab3 Add process sketch moment to brainstorming + process anchor integration to prd-to-plan
-4744884 Add deploy skill, retrospective skill, and framework doc updates
-4bfddcc Solo Builder Framework — complete skill set built
 
 ## Done
