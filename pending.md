@@ -1,6 +1,6 @@
 # Pending Work
 
-**Last updated:** 2026-05-03
+**Last updated:** 2026-05-05
 
 Items that are open and need to be picked up. Remove when done, add when identified.
 
@@ -19,6 +19,11 @@ Items that are open and need to be picked up. Remove when done, add when identif
 - [x] Companion board brainstorm — doc written, committed, new cycle ready to open
 
 ---
+
+## Shipped 2026-05-05
+
+- [x] v2.3.0 — Security classification (6 classes, tech-context through Check 9)
+- [x] Solo Companion viewer JS bug fix — slice overlay ternary syntax error
 
 ## Framework — Needs Design Session
 

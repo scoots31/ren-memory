@@ -1,18 +1,25 @@
 # Ren — Session Context
 
-**Last updated:** 2026-05-03
-**Framework version:** v2.1.0
+**Last updated:** 2026-05-05
+**Framework version:** v2.3.0
 **Updated by:** Ren (session closeout)
 
 ---
 
 ## Current State
 
-The Solo Builder Framework is in excellent health. Sub-agent capabilities are now wired across four core skills. Ren memory infrastructure is fully operational. A new companion build cycle has been formally opened.
+The Solo Builder Framework is in excellent health. v2.3.0 shipped — security classification is now a first-class framework concept. Six classes (Personal, Financial, Authentication, Multi-tenant, Confidential, Regulated) declared at tech-context and enforced through design sprint, solo-build pre-flight, and an expanded Check 9 (9a–9t). Also: fixed a critical Solo Companion bug (broken JS syntax in slice overlay killed the entire viewer). Kanban board build is active in a parallel session.
 
 ---
 
 ## Recent Sessions
+
+### 2026-05-05 (this session)
+- Fixed Solo Companion viewer JS syntax error (broken ternary in slice overlay — `:'}'` instead of `:''}` — killed the entire page)
+- v2.3.0: Security classification — 6 classes declared at tech-context, enforced through design sprint (process-mapper gaps), solo-build pre-flight (quality contract check), and Check 9 (9a–9t, class-specific sub-checks). Regulated class gets acknowledgment gate + deploy hard stop.
+- Comms cascade deployed — blog, skills-reference, guide-build, guide-design-sprint updated at sbf-framework-docs.pages.dev
+- Bayer demo materials still pending (★★★ from May 5 diary)
+- Kanban board build active in parallel session
 
 ### 2026-05-03 (this session)
 - v2.0.0: Ren memory infrastructure — ren-memory repo created, cross-device context, curator-summary layer, Stop hooks (diary reminder fixed, ren-memory push, Cloudflare auto-deploy), daily 8am health check routine
