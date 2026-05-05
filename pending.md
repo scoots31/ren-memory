@@ -56,6 +56,18 @@ Items that are open and need to be picked up. Remove when done, add when identif
 
 ---
 
+## Han Solo (Framework as Owned Application)
+
+- [ ] Design session 1 — Module inventory (name every existing module, define its boundaries and interface)
+- [ ] Design session 2 — Application architecture (module connections, context assembly, BYOK, data model)
+- [ ] Design session 3 — Interface design (what it looks like to use, Solo Companion as seed)
+- [ ] Design session 4 — Collaboration model (Scott + Ted, ownership, visibility, permissions)
+
+To open: say "Han Solo" or "open Han Solo" to Ren. Read ren-memory/shared/ideas.md first.
+Private to Scott and Ren only — never referenced in engineering-playbook.
+
+---
+
 ## Apps (~/Apps)
 
 - [ ] Hair Stylist App — blocked on user interviews; interview guide needed when ready

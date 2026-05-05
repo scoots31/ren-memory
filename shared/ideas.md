@@ -130,3 +130,18 @@ Anthropic will improve memory. Cursor will improve project context. Neither is t
 - What does the multi-project dashboard actually show? Phase, health, last activity, open decisions?
 - How does the BYOK key management work — stored encrypted per user, or passed per session?
 - Does this replace the engineering-playbook flat files or live alongside them during a transition period?
+
+### Activation
+
+**Codename: Han Solo** — private to Scott and Ren only. Never referenced in engineering-playbook or any shared artifact.
+
+To open a design session: say "Han Solo" or "open Han Solo" directly to Ren. Ren reads ren-memory/shared/ideas.md to re-establish context before starting. Do NOT use "guided on" — that routes through the framework and loses this thread.
+
+### Next Steps (defined 2026-05-05)
+
+Four design sessions required before any build begins. In order:
+
+1. **Module inventory** — formally name every existing module, what it owns, and what its interface is. Foundation for everything else.
+2. **Application architecture** — how modules connect, how context is assembled and passed to Claude, BYOK key management, persistent project state data model.
+3. **Interface design** — what the application looks like to use. Solo Companion as the seed.
+4. **Collaboration model** — how Scott and Ted operate together. Ownership, visibility, permissions across shared and separate projects.
