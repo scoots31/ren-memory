@@ -1,15 +1,26 @@
-# Ren Health Check — 2026-05-05 08:05
+# Ren Health Check — 2026-05-06 08:06
 
 ## ren-memory context.md
-**Last updated:** 2026-05-03
-**Framework version:** v2.1.0
+**Last updated:** 2026-05-05
+**Framework version:** v2.4.0
 - Last Cloudflare deploy: 2026-05-03 (v2.1.0 comms cascade)
 - Last diary entry: 2026-05-03
 
 ## Pending items
-Open: 12
+Open: 15
 
 ## engineering-playbook recent commits
+934af23 v2.4.0 — Design Identity blog entry
+c888687 Add bundled design library (500 entries, 25MB) for out-of-box use
+c0a8c4b Remove styles.json from tracking — exceeds GitHub 100MB limit
+c3f64cb v2.5.0 — Solo Companion Board View comms cascade
+543cfc4 Add Public APIs reference to tech-context API communication step
+c2612de v2.4.0 — Design Identity: library search, north star anchor, design-identity.md
+ae5e44c Add design library — 1322 Refero styles seeded, extract.py for URL-based additions
+72cbd4f v2.3.1 — comms cascade
+0897351 v2.3.1 — Add Workload Identity Federation as preferred Claude API auth for cloud deploys
+59525e2 v2.3.0 — comms cascade
+172964f v2.3.0 — Security classification: build to the right standard from day one
 da493b9 v2.2.0 — comms cascade
 cd81875 v2.2.0 — Leaf node / core architecture classification + architecture type gate
 c268273 log parallel pipeline framework skill design — approved, needs design session
@@ -159,8 +170,5 @@ dfdc801 Separate reference material from framework skills
 3c55153 Add framework-curator skill
 c5942f1 Add index.html landing page and robots.txt for surge deployment
 1ea79be Communications docs review pass: visual fixes + messaging consistency
-527dd24 Update to-issues skill card in skills-reference with full SKILL.md content
-064ba43 Repo audit + setup improvements for portability
-6fdb816 Update README and Cursor User Rules for portable setup
 
 ## Done
