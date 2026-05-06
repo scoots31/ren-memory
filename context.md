@@ -86,6 +86,6 @@ These don't change session to session — only update when a decision is explici
 ## Framework Health Indicators
 
 - Last `mempalace mine` run: 2026-05-01
-- Last Cloudflare deploy: 2026-05-03 (v2.1.0 comms cascade)
-- Last diary entry: 2026-05-03
+- Last Cloudflare deploy: 2026-05-05 (v2.5.0 comms cascade)
+- Last diary entry: 2026-05-05
 - Open framework gaps: none known
