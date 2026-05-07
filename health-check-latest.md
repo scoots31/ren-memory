@@ -1,10 +1,10 @@
-# Ren Health Check — 2026-05-06 08:06
+# Ren Health Check — 2026-05-07 08:05
 
 ## ren-memory context.md
 **Last updated:** 2026-05-05
 **Framework version:** v2.4.0
-- Last Cloudflare deploy: 2026-05-03 (v2.1.0 comms cascade)
-- Last diary entry: 2026-05-03
+- Last Cloudflare deploy: 2026-05-05 (v2.5.0 comms cascade)
+- Last diary entry: 2026-05-05
 
 ## Pending items
 Open: 15
@@ -165,10 +165,5 @@ fd14551 Update always-on SKILL.md files to reflect mode-based activation
 84d85f5 Update always-on activation language across framework docs
 919092a Slim Cursor user rules to lean signal receiver
 21806da Add Workshop companion framework for spike/tool-shaped work
-9ccc367 product-continuity: add current-phase.md marker
-dfdc801 Separate reference material from framework skills
-3c55153 Add framework-curator skill
-c5942f1 Add index.html landing page and robots.txt for surge deployment
-1ea79be Communications docs review pass: visual fixes + messaging consistency
 
 ## Done
