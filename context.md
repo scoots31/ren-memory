@@ -1,18 +1,21 @@
 # Ren — Session Context
 
-**Last updated:** 2026-05-05
-**Framework version:** v2.4.0
-**Updated by:** Ren (session closeout)
+**Last updated:** 2026-05-07
+**Framework version:** v2.6.0
+**Updated by:** Ren (session mid-build)
 
 ---
 
 ## Current State
 
-The Solo Builder Framework is in excellent health. v2.4.0 shipped — Design Identity is now a first-class framework concept. A local design reference library of 1,322+ curated styles (seeded from Refero API) powers a library search step at design sprint start. The solo sees 3 reference directions with north star phrases, picks one, and the framework writes docs/design/design-identity.md — the design anchor checked by every screen in the sprint and every design review round. The library grows via extract.py (any URL → CSS extraction + Claude-generated north star). Weekly Anthropic release notes monitor also wired (scheduled task, Monday 8am, writes to ren-memory/release-notes-scan.md).
+The Solo Builder Framework is in excellent health. v2.6.0 shipped — Live Preview Verification is now wired into two framework skills. Claude Code's Preview MCP tools (screenshot, inspect, click, console logs, network, resize) fire automatically in design-review (Step 1.5: renders design sprint HTML, inspects design identity tokens, checks responsive at mobile) and in solo-build (preview check within Step 1 self-verification: screenshot, console errors, failed requests, click-through, mobile). `.claude/launch.json` is auto-created when absent. Graceful skip for non-visual projects. Claude Code exclusive with Cursor silent fallback. A local design reference library of 1,322+ curated styles (seeded from Refero API) powers a library search step at design sprint start. The solo sees 3 reference directions with north star phrases, picks one, and the framework writes docs/design/design-identity.md — the design anchor checked by every screen in the sprint and every design review round. The library grows via extract.py (any URL → CSS extraction + Claude-generated north star). Weekly Anthropic release notes monitor also wired (scheduled task, Monday 8am, writes to ren-memory/release-notes-scan.md).
 
 ---
 
 ## Recent Sessions
+
+### 2026-05-07
+- v2.6.0: Live Preview Verification — Preview MCP tools wired into design-review (Step 1.5) and solo-build (Step 1 preview check). Auto-creates launch.json. Graceful skip. Claude Code exclusive.
 
 ### 2026-05-05 (session 3)
 - v2.5.0: Solo Companion Board View shipped — Phase 6 complete, kanban in local app (/board) and cloud viewer, comms cascade deployed
