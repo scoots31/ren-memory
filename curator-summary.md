@@ -92,6 +92,7 @@ Process anchor: [to-be map file] → [step name] → [main path / branch / excep
 
 | Date | Decision |
 |---|---|
+| 2026-05-07 | v2.6.1: Start lighter re-entry read — named project resume and resume pattern now read only "Open right now" + "Next session picks up at" sections of handoff.md on initial load. Full handoff deferred until task requires it. |
 | 2026-05-07 | v2.6.0: Live Preview Verification — Preview MCP tools wired into design-review (Step 1.5: render design HTML, screenshot desktop+mobile, inspect design identity tokens) and solo-build (preview check in Step 1 self-verification: screenshot, console errors, failed requests, click-through, mobile). Auto-creates launch.json. Graceful skip for non-visual projects. Claude Code exclusive. |
 | 2026-05-05 | v2.4.0: Design Identity — design-library (1,322 Refero styles + extractor), search.py, design-sprint Step 2 rewritten as library search → 3 options → design-identity.md, design-review reads north star drift |
 | 2026-05-05 | Weekly Anthropic release notes monitor — scheduled task Monday 8am, categorizes Act/Watch/Skip, writes to ren-memory/release-notes-scan.md |

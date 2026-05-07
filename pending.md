@@ -43,7 +43,7 @@ Items that are open and need to be picked up. Remove when done, add when identif
 
 ## Framework — Approved, Ready to Execute
 
-- [ ] Start: lighter re-entry read (shared/ideas.md)
+- [x] Start: lighter re-entry read — shipped v2.6.1 (2026-05-07)
 - [ ] Discover: lighter path for clear problems (shared/ideas.md)
 - [ ] Product-continuity: lazy docs — check sync.py + parsers.py first (shared/ideas.md)
 
