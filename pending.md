@@ -69,6 +69,7 @@ Items that are open and need to be picked up. Remove when done, add when identif
 - [ ] Design session 2 — Application architecture (module connections, context assembly, BYOK, data model)
 - [ ] Design session 3 — Interface design (what it looks like to use, Solo Companion as seed)
 - [ ] Design session 4 — Collaboration model (Scott + Ted, ownership, visibility, permissions)
+- [ ] Dreaming access — Scott trying X outreach to Anthropic (form rejects ProtonMail + Gmail). Read context.md for full Managed Agents → Han Solo mapping before Design Session 1.
 
 To open: say "Han Solo" or "open Han Solo" to Ren. Read ren-memory/shared/ideas.md first.
 Private to Scott and Ren only — never referenced in engineering-playbook.

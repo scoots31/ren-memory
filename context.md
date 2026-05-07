@@ -64,6 +64,40 @@ The Solo Builder Framework is in excellent health. v2.6.0 shipped — Live Previ
 
 ---
 
+## Managed Agents — Han Solo Infrastructure Layer
+
+**Logged:** 2026-05-07
+**Source:** Anthropic X / Claude social — announced live from Code with Claude event
+
+Four capabilities released. Three in public beta, one research preview. All under `managed-agents-2026-04-01` beta header.
+
+| Capability | Status | Han Solo Connection |
+|---|---|---|
+| **Outcomes** | Public Beta | Quality contract + build iteration loop as a first-class API. Rubric-driven grader runs in isolated context, feeds gaps back to agent, iterates until satisfied. +8.4% docx, +10.1% pptx on Anthropic benchmarks. |
+| **Multiagent Orchestration** | Public Beta | Formalizes what framework sub-agent skills already do — but adds shared filesystem. Agents share `/mnt/session/` so context doesn't have to be passed manually. Persistent threads — coordinator can follow up with same agent, retaining prior context. 25-thread limit, 1-level-deep delegation. |
+| **Webhooks** | Public Beta | Push notifications for session state changes. `session.status_idled`, `session.outcome_evaluation_ended`, thread events. Small payload, fetch-on-receipt. Direct path to Solo Companion event-driven updates — no more polling. |
+| **Dreaming** | Research Preview (form required) | Background process that reviews past sessions, extracts patterns, curates memory between sessions. "Converged workflows" extraction. Hold-for-review mode keeps Scott in control. |
+
+**The core insight:** Managed Agents is Anthropic building the runtime layer that Han Solo would sit on top of. The four capabilities map directly to Han Solo's four pillars:
+- Outcomes = quality contract enforcement
+- Multiagent = sub-agent orchestration with real shared state
+- Dreaming = the owned continuity layer / persistent project intelligence
+- Webhooks = event-driven Solo Companion updates
+
+**Dreaming is the most strategic piece.** Today, what the framework "learns" between sessions is whatever Scott and Ren manually write into MemPalace and ren-memory. That's curator work — deliberate, effortful. Dreaming automates that layer: reviews sessions, extracts what converged, curates memory without human overhead. Closes the open Han Solo design question: *how does the owned application get smarter over time without the owner doing curator work after every session?*
+
+**Access status:** Dreaming requires form signup at claude.com/form/claude-managed-agents. Form rejects ProtonMail and Gmail — Scott looking for alternative email or will try X outreach to Anthropic directly. Not a blocker for Han Solo design sessions — it's design input, not a prerequisite.
+
+**SDK note:** `claude-opus-4-7` is the coordinator model in Anthropic's own multiagent examples.
+
+**Docs saved:**
+- Blog: claude.com/blog/new-in-claude-managed-agents
+- Outcomes: platform.anthropic.com/docs/en/managed-agents/define-outcomes
+- Multiagent: platform.anthropic.com/docs/en/managed-agents/multi-agent
+- Webhooks: platform.anthropic.com/docs/en/managed-agents/webhooks
+
+---
+
 ## Pending Work
 
 See `pending.md` for the full list.
