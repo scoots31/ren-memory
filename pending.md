@@ -51,9 +51,9 @@ Items that are open and need to be picked up. Remove when done, add when identif
 
 ## Framework — Deferred / Backlog
 
-- [ ] solo-build: session limit guardrail
-- [ ] retro: curator path
-- [ ] deploy: auto-detect platform
+- [x] solo-build: session limit guardrail — closed 2026-05-07, premature without session telemetry data to set meaningful threshold
+- [x] retro: curator path — closed 2026-05-07, retro log reviewed and found empty; reopen when log accumulates signal across multiple projects
+- [x] deploy: auto-detect platform — closed permanently 2026-05-07, explicit platform selection at tech-context is the right UX; auto-detect adds convenience but removes a useful forcing function
 
 ---
 
