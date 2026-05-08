@@ -1,18 +1,27 @@
 # Ren — Session Context
 
-**Last updated:** 2026-05-07
-**Framework version:** v2.6.0
-**Updated by:** Ren (session mid-build)
+**Last updated:** 2026-05-08
+**Framework version:** v2.7.0
+**Updated by:** Ren (session close)
 
 ---
 
 ## Current State
 
-The Solo Builder Framework is in excellent health. v2.6.0 shipped — Live Preview Verification is now wired into two framework skills. Claude Code's Preview MCP tools (screenshot, inspect, click, console logs, network, resize) fire automatically in design-review (Step 1.5: renders design sprint HTML, inspects design identity tokens, checks responsive at mobile) and in solo-build (preview check within Step 1 self-verification: screenshot, console errors, failed requests, click-through, mobile). `.claude/launch.json` is auto-created when absent. Graceful skip for non-visual projects. Claude Code exclusive with Cursor silent fallback. A local design reference library of 1,322+ curated styles (seeded from Refero API) powers a library search step at design sprint start. The solo sees 3 reference directions with north star phrases, picks one, and the framework writes docs/design/design-identity.md — the design anchor checked by every screen in the sprint and every design review round. The library grows via extract.py (any URL → CSS extraction + Claude-generated north star). Weekly Anthropic release notes monitor also wired (scheduled task, Monday 8am, writes to ren-memory/release-notes-scan.md).
+v2.7.0 shipped — Full rebuild of the build execution model. solo-build rewritten from the ground up: design+data correlation gate (hard stop before any branch opens if design references a field not in the data spec), builder never declares done (QA manifest is observations only), Review Agent is a new independent skill that owns the Done gate (reads design + data independently, screenshots running output, reads actual data store, returns CLEARED or GAPS). Terminal command rule enforced — builder never asks solo to run commands. Preview port fix — one source of truth (launch.json), same value used for server and review link. Design library updated to surface review links per option; options with no link are not presented. Backlog section header bug fixed — parsers.py requires `## Slice Detail` exactly; records-spec and prd-to-plan now specify exact strings. All five project backlogs verified and corrected.
 
 ---
 
 ## Recent Sessions
+
+### 2026-05-08
+- v2.7.0: solo-build full rewrite — correlation gate, builder QA manifest (no self-cert), Review Agent owns Done gate, terminal command rule, preview port fix
+- review-agent: new skill — independent, CLEARED or GAPS only, reads everything from source files not builder report, "not a blocker" not a valid output, repeated gap rule (3x → surface to solo)
+- Design library: search.py now extracts screenshotUrl, surfaces review link per result, options with no link filtered out; design-sprint Step 2a updated
+- Backlog section headers: parsers.py requires exact strings — records-spec and prd-to-plan now specify them; all 5 project backlogs verified (gift-tracker was the only one wrong, fixed)
+- Garden planner: full data audit completed — 26 broken images (Perenual paywall), 5 wrong-category plants, 43 plants missing indoor_weeks_before_frost; plant list was never locked in discovery (framework gap noted); waiting on Scott's approved plant list before re-run
+- Discovery gap identified: for data-heavy products, discovery must produce an exact data inventory (e.g. plant list) — not just categories. Needs framework fix.
+- Scott insight: solo still has to own the upfront thinking — framework enforces process but can't substitute for product decisions that weren't made
 
 ### 2026-05-07
 - v2.6.0: Live Preview Verification — Preview MCP tools wired into design-review (Step 1.5) and solo-build (Step 1 preview check). Auto-creates launch.json. Graceful skip. Claude Code exclusive.
