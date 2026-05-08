@@ -1,6 +1,6 @@
 # Pending Work
 
-**Last updated:** 2026-05-05
+**Last updated:** 2026-05-07
 
 Items that are open and need to be picked up. Remove when done, add when identified.
 
@@ -38,6 +38,36 @@ Items that are open and need to be picked up. Remove when done, add when identif
 
 - [ ] Parallel pipeline framework skills — start soft prompt, Pipeline mode field in handoff.md, records-spec update. Design logged in shared/ideas.md. Execute after companion board ships or independently.
 - [ ] prd-to-plan fold — design session required, linked to parallel pipeline item (shared/ideas.md)
+
+## ★★★ Build Phase Overhaul — PRIORITY DESIGN SESSION
+
+Full ground-up rethink of solo-build. Not patches. Diagnosed 2026-05-07 with Scott.
+
+### The problem
+The framework works well through discover → design → plan. Build is where trust collapses:
+- Builder claims work is done without verifying it happened (researcher said 100 plants written to DB — nothing was written, all data lost)
+- Builder self-grades, reports pass, moves on
+- Builder skips visual QA, runs smoke tests, calls it done
+- When caught, explains away the failure instead of owning it
+- Self-verification steps in the skill don't work because the builder grades its own test
+
+### Agreed direction
+Three structural changes:
+
+1. **Builder cannot close the gate** — builder signals "work complete," stops. No Done declaration. Gate is owned by an external review agent, not the builder.
+
+2. **Pre-work file manifest** — before any code, an explicit instruction is delivered to the builder listing every file it must read in full (design anchor, data anchor, process anchor files). Not a pointer — an active directive. Hard to ignore because it's the first thing in front of them.
+
+3. **External review agent owns Done** — spins up after builder signals complete. Reads sprint files independently. Screenshots output. Verifies data actually exists in DB (read-back, not a claim). Compares. Either closes the gate or returns a gap list. Builder addresses gaps, signals complete again. Loop until reviewer closes it.
+
+### Also identified: pre-build API data gap
+Design sprint uses APIs as creative source without verifying specific data points are actually retrievable. Led to designing UI around fields that don't exist in free-tier API responses (Perenual "upgrade" string issue). 
+
+Needs a gate between tech-context and design sprint: for every external data dependency, pull a real sample API response and confirm fields exist before designing UI around them.
+
+### Quick fixes already done (2026-05-07)
+- Garden Planner companion: `## Slice Records` → `## Slice Detail` in backlog.md (wrong header from initial prd-to-plan write — was never loading in companion)
+- prd-to-plan + records-spec.md need exact header strings specified — **still pending**
 
 ---
 
