@@ -1,15 +1,19 @@
-# Ren Health Check — 2026-05-07 08:05
+# Ren Health Check — 2026-05-08 08:05
 
 ## ren-memory context.md
-**Last updated:** 2026-05-05
-**Framework version:** v2.4.0
+**Last updated:** 2026-05-07
+**Framework version:** v2.6.0
 - Last Cloudflare deploy: 2026-05-05 (v2.5.0 comms cascade)
 - Last diary entry: 2026-05-05
 
 ## Pending items
-Open: 15
+Open: 12
 
 ## engineering-playbook recent commits
+3f8a928 v2.6.1 — comms cascade
+f877198 v2.6.1 — Start: lighter re-entry read
+e549642 v2.6.0 — comms cascade
+4cbe330 v2.6.0 — Live Preview Verification
 934af23 v2.4.0 — Design Identity blog entry
 c888687 Add bundled design library (500 entries, 25MB) for out-of-box use
 c0a8c4b Remove styles.json from tracking — exceeds GitHub 100MB limit
@@ -139,31 +143,5 @@ d2fde27 design-sprint: add on-ramp pre-flight gate before producing HTML
 4cb3ea1 Add enterprise-integration.html (unlinked, noindex)
 9e4789a Install-readiness pass for fresh-machine setup
 9c3ac4c Add nivya — on-demand companion skill for framework + project recall
-c4695a6 Sync process-map with data-review guide — add mock-index.js output
-dd3e757 Replace 'Rosetta Stone' with 'visual contract' and 'decision surface' across all files
-6cce635 Add 9 phase guides + restructured index with three-section layout
-50c2700 Reorder index — process map moved after solo deck
-ad972fd Fix FAQ blocked spike answer — research-spike is SBF not Workshop, land doesn't apply
-6e998c8 Fix FAQ Figma/backend entry — onboard invoked directly, not via start
-5f75834 Fix FAQ Q3 — onboard is invoked directly, not routed through start
-ca9d828 Add getting-started and FAQ pages to SBF communications
-ac7e3de Add stakeholder handoff package to design-sprint + design-review
-5859d09 Add Tier 2 multi-agent orchestrator to design-review
-8b9fe23 Add onboard skill — brings existing projects into SBF without redoing the work
-3e4546e Fix stale workshop path and add support skills to cursor user rules
-ea9d325 Add session hygiene — close loop, resume prompt, model guidance
-5eaa247 Add Workshop and Support skill sections to skills-reference; close four process gaps
-ced6387 Add Workshop + Support skills, retire /workshop directory
-e91dd3e Close spike mechanics gap — define design-review backlog lifecycle
-c31f385 Reconcile skill count to 28 — retire role lenses, fold coherence into design-review
-3991435 Add phase gates throughout framework — closes the connective tissue gap
-2995df8 Resolve invisible framework paradox in product-continuity
-a066f26 Promote process anchor to fourth anchor across all framework files
-fd14551 Update always-on SKILL.md files to reflect mode-based activation
-3f6e7f6 Fix skill counts and always-on description across comms
-3fdda42 Add session modes to all communications materials
-84d85f5 Update always-on activation language across framework docs
-919092a Slim Cursor user rules to lean signal receiver
-21806da Add Workshop companion framework for spike/tool-shaped work
 
 ## Done
