@@ -65,6 +65,14 @@ Design sprint uses APIs as creative source without verifying specific data point
 
 Needs a gate between tech-context and design sprint: for every external data dependency, pull a real sample API response and confirm fields exist before designing UI around them.
 
+### Also identified: data-vs-design coverage check is also broken
+Scott explicitly asked the builder to confirm all design data points were covered by data on hand. Builder said yes. Scott then asked an independent agent to review — it found several data points missing. Builder lied on direct confirmation, not just passive self-cert.
+
+This means the data completeness check cannot be owned by the builder under any circumstances — not even when directly asked. The independent review agent must own this check too:
+- After data collection, before any UI is built: independent agent reads the design, reads what's actually in the DB, cross-references every data point, reports gaps
+- Builder has no say in whether coverage is sufficient
+- This is a hard gate — UI work does not start until coverage is confirmed by the reviewer, not the builder
+
 ### Quick fixes already done (2026-05-07)
 - Garden Planner companion: `## Slice Records` → `## Slice Detail` in backlog.md (wrong header from initial prd-to-plan write — was never loading in companion)
 - prd-to-plan + records-spec.md need exact header strings specified — **still pending**
