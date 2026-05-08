@@ -72,6 +72,8 @@ This means the data completeness check cannot be owned by the builder under any 
 - After data collection, before any UI is built: independent agent reads the design, reads what's actually in the DB, cross-references every data point, reports gaps
 - Builder has no say in whether coverage is sufficient
 - This is a hard gate — UI work does not start until coverage is confirmed by the reviewer, not the builder
+- Images are data. "Everything that populates on screen" includes images, icons, and any asset sourced externally. Builder confirmed full coverage while images were missing.
+- On the 5th pass of data verification for the same project, builder found 13 missing images and declared "not a blocker" and attempted to move on. The builder does not get to decide what is or isn't a blocker. That call belongs to the reviewer or the solo — never the builder. "Not a blocker" from the builder is a red flag, not a resolution. ★★★
 
 ### Quick fixes already done (2026-05-07)
 - Garden Planner companion: `## Slice Records` → `## Slice Detail` in backlog.md (wrong header from initial prd-to-plan write — was never loading in companion)
