@@ -85,9 +85,17 @@ Quick fixes also done:
 
 ## Han Solo (Framework as Owned Application)
 
-- [ ] Design session 1 — Module inventory (name every existing module, define its boundaries and interface)
-- [ ] Design session 2 — Application architecture (module connections, context assembly, BYOK, data model)
-- [ ] Design session 3 — Interface design (what it looks like to use, Solo Companion as seed)
+**Architecture decided 2026-05-09:**
+- Hosting: Render (~$21/mo — Letta service + PostgreSQL + web app)
+- Memory foundation: Letta self-hosted (Apache 2.0, open source, no limits)
+- Three memory stores: framework knowledge / Ren memory (relational + vector) / conversation log
+- Multi-user chat room is the core interface — Scott, Ted, Ren
+- CLAUDE.md stays local as thin bridge for local execution work
+- Seed from ren-memory + MemPalace on migration (cleanup pass first)
+
+- [ ] Design session 1 — Module inventory + memory schema shape (name every module, define boundaries, define memory types and structure)
+- [ ] Design session 2 — Application architecture (Letta self-hosted setup, validate multi-user identity model first, context assembly, data model, BYOK)
+- [ ] Design session 3 — Interface design (chat room as primary interface, Solo Companion as seed)
 - [ ] Design session 4 — Collaboration model (Scott + Ted, ownership, visibility, permissions)
 - [ ] Dreaming access — Scott trying X outreach to Anthropic (form rejects ProtonMail + Gmail). Read context.md for full Managed Agents → Han Solo mapping before Design Session 1.
 

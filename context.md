@@ -126,6 +126,11 @@ These don't change session to session — only update when a decision is explici
 - **Sub-agents automatic:** design-review Enhanced Mode fires when Agent tool available — no manual activation
 - **Ren diary:** write to MemPalace at every session end, agent name: `ren`
 - **MemPalace CLI:** `/Users/scottheinemeier/Apps/.venv/bin/mempalace` (use `zsh -l -c` if PATH issues)
+- **Han Solo hosting:** Render — Letta service ($7/mo) + PostgreSQL with pgvector ($7/mo) + Han Solo web app ($7/mo). ~$21/mo at private scale. Decided 2026-05-09.
+- **Han Solo memory foundation:** Letta self-hosted (Apache 2.0, open source). No agent limits, no per-seat pricing, fully modifiable. Build Han Solo layer on top.
+- **Han Solo architecture:** Three memory stores — framework knowledge (document store), Ren memory (relational + vector), conversation log (identity-tagged raw chat). All PostgreSQL on Render.
+- **Han Solo CLAUDE.md evolution:** Local CLAUDE.md stays for local execution work but becomes a thin bridge — identity + local env config + pointer to Han Solo cloud. Framework context assembly moves to Han Solo.
+- **Han Solo memory seed:** ren-memory + MemPalace will seed the cloud memory on migration. Do a cleanup pass before migrating to avoid carrying stale content.
 
 ---
 
