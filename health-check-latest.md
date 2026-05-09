@@ -1,15 +1,18 @@
-# Ren Health Check — 2026-05-08 08:05
+# Ren Health Check — 2026-05-09 08:13
 
 ## ren-memory context.md
-**Last updated:** 2026-05-07
-**Framework version:** v2.6.0
+**Last updated:** 2026-05-08
+**Framework version:** v2.7.0
 - Last Cloudflare deploy: 2026-05-05 (v2.5.0 comms cascade)
 - Last diary entry: 2026-05-05
 
 ## Pending items
-Open: 12
+Open: 15
 
 ## engineering-playbook recent commits
+462141d Fix backlog section headers — Solo Companion parser requires exact strings
+ef4629a Design library: surface review links, filter options without them
+da194b1 v2.7.0: Rebuild solo-build + new Review Agent skill
 3f8a928 v2.6.1 — comms cascade
 f877198 v2.6.1 — Start: lighter re-entry read
 e549642 v2.6.0 — comms cascade
@@ -126,22 +129,5 @@ e97a6d2 Curator self-update — six lessons from April 25 session
 8e286a4 Add April 25 release notes entry to blog
 fefc103 Add two delivery rules: AI runs commands, review is always visual
 7215c9e Add release notes blog to communications docs
-fa7e163 Fix design-sprint on-ramp 2 fidelity standard — extract exact Figma values before building
-0cb3ad4 Add named project resume — "auto pilot on [name]" picks up any project without a saved prompt
-dd47c27 Collapse curator output principles to single Output Contract pointer
-687aa9f Add output contract to Cursor rules template — governs all user-facing output across every mode
-e504360 Plain language audit — eliminate SBF abbreviations and skill names from user-facing output
-dc3e1d0 framework-health: two-path fork format + anti-patterns for vague transitions
-a5c0fb7 framework-health: explicit gate confirmations + milestone lines
-1c28824 Add principle #10: output discipline
-d426e72 framework-health: check for upstream updates at mode activation
-4f7c070 Add load-bearing principle: framework writes, solo responds
-4203289 design-sprint: enumerate all Figma frames upfront; capture all layers per frame
-d2fde27 design-sprint: add on-ramp pre-flight gate before producing HTML
-9bb1cec Slide 3: three entry points — add Onboard card alongside Discover and Brainstorm
-14401e7 Refine nivya skill description — clarify scope vs other skills
-4cb3ea1 Add enterprise-integration.html (unlinked, noindex)
-9e4789a Install-readiness pass for fresh-machine setup
-9c3ac4c Add nivya — on-demand companion skill for framework + project recall
 
 ## Done
