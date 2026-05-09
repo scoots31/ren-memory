@@ -133,5 +133,5 @@ These don't change session to session — only update when a decision is explici
 
 - Last `mempalace mine` run: 2026-05-01
 - Last Cloudflare deploy: 2026-05-05 (v2.5.0 comms cascade)
-- Last diary entry: 2026-05-05
-- Open framework gaps: none known
+- Last diary entry: 2026-05-09
+- Open framework gaps: discovery gap (exact data inventory for data-heavy products — design session needed)
