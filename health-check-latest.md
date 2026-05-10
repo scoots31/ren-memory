@@ -1,10 +1,10 @@
-# Ren Health Check — 2026-05-09 08:13
+# Ren Health Check — 2026-05-10 08:06
 
 ## ren-memory context.md
 **Last updated:** 2026-05-08
 **Framework version:** v2.7.0
 - Last Cloudflare deploy: 2026-05-05 (v2.5.0 comms cascade)
-- Last diary entry: 2026-05-05
+- Last diary entry: 2026-05-09
 
 ## Pending items
 Open: 15
@@ -112,22 +112,5 @@ d32c0f0 Add records-spec decision log entry to curator context
 d950dbd Add status gate and build pause protocol to solo-build
 96e30c2 Add self-executing Claude Code install path
 1c2b273 Add session mode vocabulary to Claude Code setup block in README
-782a94b Add Hole #1 design notes — non-visual products
-625c69a Hole #8 — cross-tool review tip surfaced at phase test readiness signal
-8101a80 Hole #6 — phase test timing: readiness table in phase-test, nudge in framework-health
-e77d22d Hole #7 — long-gap recovery: detection in framework-health, re-entry in product-continuity
-234ac4e Add data integration planning — data questions log + integration deliverables
-4801880 Add process-change skill — to-be map change management protocol
-5a17859 Add mode rename and modes slide to What's New blog
-ca941d7 Rename session modes: bare / piloted / guided (was assisted / auto-pilot)
-1dfabe7 Tighten 'contract' language in deck-solo
-65cecca Fix deck-solo slides 5, 6, 7 tweaks
-e108bd1 Add Deliverable concept to deck-solo and process map
-e97a6d2 Curator self-update — six lessons from April 25 session
-6f0debc Deliverable concept — skill behavior changes (Part 2)
-0091910 Introduce Deliverable concept across framework docs (Part 1)
-8e286a4 Add April 25 release notes entry to blog
-fefc103 Add two delivery rules: AI runs commands, review is always visual
-7215c9e Add release notes blog to communications docs
 
 ## Done
