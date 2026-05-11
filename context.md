@@ -1,6 +1,6 @@
 # Ren — Session Context
 
-**Last updated:** 2026-05-10
+**Last updated:** 2026-05-11
 **Framework version:** v2.7.0
 **Updated by:** Ren (session close)
 
@@ -8,7 +8,7 @@
 
 ## Current State
 
-v2.7.0 shipped — Full rebuild of the build execution model. solo-build rewritten from the ground up: design+data correlation gate (hard stop before any branch opens if design references a field not in the data spec), builder never declares done (QA manifest is observations only), Review Agent is a new independent skill that owns the Done gate (reads design + data independently, screenshots running output, reads actual data store, returns CLEARED or GAPS). Terminal command rule enforced — builder never asks solo to run commands. Preview port fix — one source of truth (launch.json), same value used for server and review link. Design library updated to surface review links per option; options with no link are not presented. Backlog section header bug fixed — parsers.py requires `## Slice Detail` exactly; records-spec and prd-to-plan now specify exact strings. All five project backlogs verified and corrected.
+Han Solo Sessions 1 and 2 complete. Session 1 (2026-05-11 earlier) produced the full module inventory — three categories, eight infrastructure modules, eight shared phase modules, three abstract phase modules with path-specific implementations. Platform model confirmed. Session 2 (2026-05-11) produced the full application architecture — module connection map, context assembly design, four memory stores, Ren's continuity layer (the most important design work in Han Solo), chat interface design, BYOK flexible key model, four-tier project visibility, API layer. Letta confirmed as the right foundation with major scope reduction — sleeptime agents handle homegrown Dreaming natively. Living portraits and signal taxonomy designed. Session 3 (Interface Design) and Session 4 (Collaboration Model) pending.
 
 ---
 
