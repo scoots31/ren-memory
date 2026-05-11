@@ -106,6 +106,85 @@ In order. None can be skipped. Build doesn't start until all four are complete a
 
 Formally name every existing module (drawn from the framework's current skills, phases, and continuity model). Define what each module owns. Define how modules interact. This is the foundation for everything else — Session 2 cannot start until every module is named and bounded.
 
+#### Session 1 Output — Module Inventory (completed 2026-05-11)
+
+**Key design decisions made this session:**
+
+1. **Han Solo is a platform, not just a product.** The framework is one instantiation of a module composition. The platform supports building other framework paths (agent build, API build) by composing modules from the library.
+
+2. **Three module categories:**
+   - **Infrastructure modules** — platform plumbing, not phases. Run underneath everything.
+   - **Shared phase modules** — same concept AND same execution in any framework path.
+   - **Abstract phase modules with path-specific implementations** — the phase concept is shared (same slot in any framework path); what you do inside it varies per path.
+
+3. **Module library supports cloning.** Clone any module as a starting point — the clone is fully independent. No runtime link to the source. Provenance is tracked as metadata (what was cloned, from which version, on what date) but carries no enforcement.
+
+4. **Project Profile is a distinct infrastructure module** — not part of project state. Fixed record established once: stack, security class, external APIs, deploy strategy. Every downstream phase reads from it. Deploy executes what Project Profile already decided — no assembly under pressure.
+
+5. **Stress test before closing conclusions** — a design session standard. Before committing any significant conclusion, turn it on its head and challenge it from a different angle. Caught a real architectural issue this session (see decision 6).
+
+6. **Abstract phase modules — caught by stress test.** Initial conclusion was "all phase modules are shared." Stress test revealed Design Sprint and Solo Build have shared *concepts* but path-specific *implementations* — the execution steps differ enough per framework path that they can't be one shared module. Resolution: abstract interface (defined inputs/outputs) + path-specific implementations in the module library.
+
+---
+
+**Infrastructure Modules**
+
+| Module | Owns | Does NOT Own | Interface |
+|---|---|---|---|
+| Memory Layer | All persistence — framework knowledge, Ren memory, conversation log (three Letta stores) | Content selection for a given phase | Read/write by store type and query |
+| Context Assembly | Selecting exactly the right content per phase and passing it to Claude | The content itself | In: phase + project state → Out: context package for Claude |
+| Phase Gate Engine | Gate definitions and structural enforcement — a phase cannot open if prerequisites don't exist | Phase content and execution | In: phase request → Out: open or blocked with named gap |
+| Project Profile | Fixed record per project — stack, security class, APIs, deploy strategy. Written once, read by every downstream phase. | Dynamic project state (backlog, decisions, slice history) | In: tech-context session → Out: locked profile record |
+| Module Library | All modules and skills — browse/search, versioning, cloning, provenance metadata, independence guarantee | Execution of any module | In: browse/clone/version request → Out: module artifact |
+| BYOK Key Management | Encrypted API key storage and retrieval per user | Making API calls | In: store/retrieve request per user → Out: key |
+| Multi-user Identity | Authentication, user records, session management | What users can see or change across projects | In: login → Out: authenticated session |
+| Collaboration State | Ownership model — which projects are shared, per-user visibility and permissions | Authentication | In: permission check → Out: allowed or denied |
+
+---
+
+**Shared Phase Modules** (same concept and execution in any framework path)
+
+| Module | Owns | Does NOT Own | Interface |
+|---|---|---|---|
+| Brainstorm | Open product exploration — surfaces ideas, surfaces constraints, produces a documented artifact | Product decisions (those are the solo's) | In: problem or idea → Out: brainstorm artifact |
+| Discover | Structured discovery toward a buildable product definition | PRD production | In: brainstorm artifact or direct brief → Out: discovery artifact |
+| Tech-context | Technical profile session — stack, security class, APIs, platform. Feeds Project Profile. | Holding the profile record (Project Profile owns that) | In: project brief → Out: profile inputs to Project Profile |
+| PRD-to-Plan | Converting a product definition into a sequenced backlog with slice anchors | Executing slices | In: PRD → Out: backlog |
+| Solo QA | Verifying a completed slice is actually done against defined criteria | Building fixes | In: QA manifest + running output → Out: CLEARED or issues |
+| Phase Test | Full end-to-end testing of a completed product | Slice-level verification | In: complete product → Out: test report |
+| Retrospective | Learning capture across phases and sessions | Acting on what it captures | In: phase completion or session signal → Out: retro log entry |
+| Deploy | Executing the pre-built deploy strategy from Project Profile | Assembling the deploy strategy | In: project profile deploy plan + built product → Out: live deployment |
+
+---
+
+**Abstract Phase Modules with Path-Specific Implementations**
+
+Each module defines a shared interface (inputs and outputs). The module library holds path-specific implementations underneath.
+
+**Shape Establishment**
+- Interface: In: product definition artifact + design library or equivalent → Out: identity/shape document
+- App Build implementation → Design Sprint (design library, screenshots, design-identity.md)
+- Agent Build implementation → Agent Scoping (behavior spec, capability list, tool selection)
+- API Build implementation → API Design (endpoint contract, data model, auth model)
+
+**Build Execution**
+- Interface: In: slice + four anchors → Out: working output + QA manifest
+- App Build implementation → Solo Build (UI code, correlation gate, design+data anchors)
+- Agent Build implementation → Agent Build (prompt engineering, tool definitions, behavior testing)
+- API Build implementation → API Build (endpoint implementation, contract validation)
+
+**Design Review**
+- Interface: In: shape document + running output → Out: CLEARED or GAPS
+- App Build implementation → Design Review (screenshot vs. design-identity.md)
+- Agent Build implementation → Behavior Review (observed behavior vs. behavior spec)
+- API Build implementation → Contract Review (actual responses vs. endpoint contract)
+
+---
+
+**Flagged for collapse/elimination in Session 2**
+
+process-mapper, product-continuity, and framework-health likely absorbed into infrastructure modules once the full architecture is defined. Today these skills compensate for missing structural awareness. In Han Solo, that awareness is intrinsic.
+
 ### Session 2 — Application Architecture
 **Question to answer:** How do modules connect, how is context assembled and passed to Claude, and what is the persistent project state data model?
 
@@ -140,7 +219,7 @@ These are the questions that need answers before or during the design sessions. 
 
 | Session | Date | Outcome |
 |---|---|---|
-| 1 — Module Inventory | Pending | — |
+| 1 — Module Inventory | 2026-05-11 | Complete. 3 module categories, 8 infrastructure modules, 8 shared phase modules, 3 abstract phase modules with path-specific implementations. Platform model confirmed. Clone/fork capability defined. Stress test standard established. |
 | 2 — Application Architecture | Pending | — |
 | 3 — Interface Design | Pending | — |
 | 4 — Collaboration Model | Pending | — |
