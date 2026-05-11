@@ -189,10 +189,19 @@ process-mapper, product-continuity, and framework-health likely absorbed into in
 **Question to answer:** How do modules connect, how is context assembled and passed to Claude, and what is the persistent project state data model?
 
 **Agenda (in order — each item informs the next):**
-1. Resolve flagged modules — process-mapper, product-continuity, framework-health. What does the application make obsolete? What survives?
-2. Module connection map — how do modules talk to each other? What does the Phase Gate Engine check before opening each phase?
+1. Resolve flagged modules ✓
+2. Module connection map ✓
+3. Context assembly design ✓
+4. Letta memory schema ✓
+5. Ren's memory model ✓
+6. Chat interface design — in progress
+7. BYOK key management
+8. Multi-tenant identity and project visibility
+9. API layer
 
-#### Session 2 Decisions (in progress)
+---
+
+#### Session 2 Decisions
 
 **Flagged modules resolved:**
 - process-mapper → absorbed into Discover as a standard output (as-is/to-be maps). Format lives in module library as a path-specific implementation. Skill goes away.
@@ -360,6 +369,31 @@ At session open Ren doesn't just read its own notes from last close. The nightly
 - The one thing most worth raising today
 
 Ren reads the brief at session open and decides what to surface, when, and how. The job does the thinking. Ren does the judgment.
+
+**Letta native capability mapping — major scope reduction:**
+
+Letta already provides production-grade infrastructure for everything we were planning to build from scratch. Han Solo is a product layer on top of Letta, not a full application build.
+
+| What we designed | What Letta provides natively |
+|---|---|
+| Store 3 — conversation log | Recall memory — relational, full history, searchable |
+| Store 4 — always-loaded core | Core memory — always in-context, exactly this |
+| Store 4 — deeper signals and portraits | Archival memory — vector store, semantic retrieval |
+| Homegrown Dreaming scheduled jobs | Sleeptime agents — background memory maintenance threads, cron-based |
+| Three-cadence Dreaming process | Native scheduling — one-off and recurring cron tasks |
+| PostgreSQL + pgvector on Render | Already Letta's production stack |
+
+**Sleeptime agents are the biggest find.** Background threads that run memory maintenance without blocking primary agent execution. Our homegrown Dreaming design tells us *what* they should do — Letta provides the infrastructure that runs them. We configure and extend, not build from scratch.
+
+**What we still build on top of Letta:**
+- Custom chat UI — multi-user production interface (ADE is a dev tool, not production)
+- Authentication — Letta defers to external auth (Supabase or equivalent)
+- Portrait logic — living portraits, forming/trusted layers, signal taxonomy extraction on top of archival memory
+- Generated brief — custom logic using Letta's native scheduling
+- Context assembly rules — what gets pulled per phase
+- Phase Gate Engine — structural enforcement layer
+
+**Strategic implication:** months of infrastructure engineering removed from scope. The hardest, most failure-prone parts — memory management, session persistence, background processing, vector retrieval — are Letta's problem. We build the differentiated product layer: portraits, signal taxonomy, context assembly, phase gates. Han Solo gets to market faster with lower risk.
 
 **North star statement (from external research):**
 "The AI you have after six months is not the same one you started with. It has been reading your mind while you were busy living your life."
