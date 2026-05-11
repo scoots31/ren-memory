@@ -116,3 +116,24 @@ Full data audit done 2026-05-08. Current state:
 - Image strategy: iNaturalist by scientific name (not Unsplash — wrong subjects returned)
 - **Blocked on: Scott's approved plant list.** He is assembling it in a separate app. Do not re-run data collection until list is locked and approved.
 - gift-tracker backlog header fix committed locally — no GitHub remote configured for that repo
+
+---
+
+## Han Solo — V1 Build Ready
+
+Session 3 complete. Session 4 deferred until v1 core is running.
+
+**V1 core build sequence (to be sequenced):**
+- [ ] Letta on Render — memory stores running, sleeptime agents configured
+- [ ] Han Solo MCP server — bidirectional, auth wired, typed write tools, validation wrapper
+- [ ] Chat UI — Scott and Ted in same room, Ren present, identity markers, light/dark mode
+- [ ] Ren's memory seeded — ren-memory + MemPalace migrated, notes layer seeded
+- [ ] Session brief — nightly sleeptime job running, brief waiting at session open
+- [ ] Private messaging — @mention (quick) and private thread (sustained)
+- [ ] Memory state panel — collapsible side panel, three sections
+
+**Pending before notes layer schema:**
+- [ ] Ted conversation — his standalone notes product idea. Design notes layer foundation after that conversation.
+
+**Session 4 — Collaboration Model — deferred until v1 is live**
+- Ownership model, visibility settings UI, key management UI, full nav

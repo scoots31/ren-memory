@@ -611,3 +611,73 @@ The MCP server is the most load-bearing piece of the architecture — the nervou
 **Authentication is load-bearing.** MCP server checks identity before serving anything — determines which project to assemble context for, where writes land, what visibility tier applies.
 
 **Standard local artifact per project:** thin CLAUDE.md containing MCP server URL, user token, project ID. Nothing else. All framework knowledge and project state served from Han Solo cloud.
+
+---
+
+### Session 3 — Interface Design (completed 2026-05-11)
+
+**Scope:** Designed only what's needed to build the v1 core. Full nav, dashboard, module builder deferred to post-v1.
+
+---
+
+#### Session Start
+- **Chat first.** Land in chat, not dashboard. Dashboard is one click away.
+- **Ren speaks first.** Short conversational message — one or two things surfaced. Not a report. Full synthesis in the memory state panel.
+- **Cross-project by default.** Session brief spans all active projects. Project context assembles when you declare one.
+- **Light and dark mode.** Both supported.
+
+**Example brief message:** "Garden planner and CTL are pulling on the same unresolved question — worth a conversation today. Fantasy tool is clean. One other thing when you're ready."
+
+---
+
+#### Identity and Presence
+- Name label on each message, colored per person.
+- Ren gets distinct visual treatment — signals AI participant without being clinical.
+- Ren addresses the room by default, individual when context is clearly directed.
+- **Ted's presence during solo build:** lighter — presence indicator rather than equal voice. Observer mode.
+
+---
+
+#### Private Messaging — Two Modes
+Three private channels: Scott↔Ren, Ted↔Ren, Scott↔Ted (no Ren present).
+
+**@mention** — quick in-flow private note. One message, stays in the main surface. Subtle indicator in main chat ("Scott sent a private message") so nobody is confused.
+
+**Private thread** — sustained private conversation with full history. Side panel, separate from main room. For longer conversations, disagreements worked through before bringing a decision back to the room.
+
+**Memory write rule:** private channel content scoped to participants only. Ren's write contracts honor channel scope, not just project scope. Store 4 signals from Scott↔Ren private threads never visible to Ted.
+
+---
+
+#### Memory State Panel
+- Collapsible side panel. Opens on demand.
+- Three sections: Active context, Memory state, Pending thoughts.
+- Stays closed when in flow. One click to open.
+
+---
+
+#### Notes Layer (partially designed — pending Ted conversation)
+- Free-floating, not project-scoped. Anything, any time.
+- **Replaces MemPalace entirely.** Han Solo is the new home for captured thoughts.
+- Scott and Ted each have their own notes space.
+- Searchable — self-serve and "ask Ren to search with permission."
+- Private by default — same permission model as private messaging.
+- **MemPalace migration scope:** MemPalace content seeds the notes layer on migration, not just Ren's stores.
+- **Schema design deferred** pending Ted's standalone product idea conversation — notes layer foundation may inform his product.
+
+---
+
+#### Deferred to Post-V1
+- Full nav structure — too many new surfaces to design against Solo Companion assumptions
+- Dashboard design
+- Module builder (confirmed as Session 5)
+- Project visibility settings UI
+- Key management UI
+
+---
+
+#### Session Log Update
+| Session | Date | Outcome |
+|---|---|---|
+| 3 — Interface Design | 2026-05-11 | Complete for v1 scope. Chat first, Ren's brief, private messaging (two modes), memory panel, notes layer (partially designed). Full nav and dashboard deferred. |
+| 4 — Collaboration Model | Pending — deferred until after v1 core is running | — |
