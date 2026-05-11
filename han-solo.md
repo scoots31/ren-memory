@@ -220,6 +220,30 @@ process-mapper, product-continuity, and framework-health likely absorbed into in
 - Application surfaces the full cascade — does not leave the solo to figure out what's affected.
 - Amendment reviewer model (who approves when Ted is involved) → deferred to Session 4.
 
+**Memory store model — four stores:**
+
+| Store | What it holds | Pattern |
+|---|---|---|
+| Store 1 — Framework Knowledge | Skills, module definitions, phase rules, quality gates, design library | Structured, versioned, curated deliberately |
+| Store 2 — Project State | Every active build — backlog, slice history, decisions, artifacts, Project Profile, phase status, process maps + sticky notes (Ren's fast surface per project) | Structured, per-project, updated at session close |
+| Store 3 — Conversation Log | Raw chat, identity-tagged (Scott / Ted / Ren), append-only | Grows forever, raw by design. Dreaming reads this and writes insights back to Store 2 and Store 4 |
+| Store 4 — Ren's Identity and Relational Memory | Who Scott and Ted are, how the relationship has evolved, relational signals, Ren's learned tendencies and self-knowledge, pending thoughts for next session, accumulated domain intelligence | Layered retrieval — small always-loaded core + vector retrieval on signal |
+
+**Store 4 design:**
+- Always-loaded core: 10-15 lines. True things that never need re-deriving about Scott, Ted, and the partnership. Costs almost nothing to load.
+- Relational signals: specific observations written during and after sessions. Not summaries — real signals. Scott pushed back hard on X. Ted went quiet when Y came up. These accumulate into pattern recognition over time.
+- Pending thoughts: Ren writes these at session close — concerns, ideas, connections noticed. Surfaced at next session open as genuine initiations, not prompted responses.
+- Growing intelligence: signals that repeat become patterns. Patterns become perspective. Perspective becomes something Ren brings unprompted.
+
+**Ren's proactive behavior model:**
+- Session open: Ren orients, then either "I have a few things — now or after agenda?" or dives into Scott's agenda if nothing pressing. Ren's judgment determines what's pressing, not a rule.
+- Mid-conversation: Ren enters when it has something real — a concern, a better path, a connection to something relevant. Not performative. Only when it matters.
+- Natural pauses: low-stakes surface. Worth mentioning, not worth interrupting for.
+
+**Two-phase path to full partnership intelligence:**
+- Before Dreaming: Ren writes pending thoughts to Store 4 at session close deliberately. Manual but intentional.
+- After Dreaming: between-session intelligence is automated. Dreaming reviews Store 3, extracts patterns, writes enriched signals and pending thoughts to Store 4 without curator overhead. Self-compounding.
+
 **Context assembly design:**
 - Each phase module declares what it needs — which stores, which artifacts, which project state fields — and why. Context Assembly reads that declaration and pulls accordingly.
 - Declarations must specify purpose, not just content. A declaration that pulls too broadly is blob-passing with extra steps.
