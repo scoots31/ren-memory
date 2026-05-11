@@ -191,6 +191,36 @@ process-mapper, product-continuity, and framework-health likely absorbed into in
 **Agenda (in order — each item informs the next):**
 1. Resolve flagged modules — process-mapper, product-continuity, framework-health. What does the application make obsolete? What survives?
 2. Module connection map — how do modules talk to each other? What does the Phase Gate Engine check before opening each phase?
+
+#### Session 2 Decisions (in progress)
+
+**Flagged modules resolved:**
+- process-mapper → absorbed into Discover as a standard output (as-is/to-be maps). Format lives in module library as a path-specific implementation. Skill goes away.
+- product-continuity → fully absorbed into Memory Layer + Context Assembly. Artifacts (handoff.md, backlog.md) become seed data for Memory Layer on migration. Skill goes away.
+- framework-health → fully absorbed into Phase Gate Engine + dashboard health indicators. Skill goes away.
+
+**Module connection map:**
+- Phase modules never talk to each other directly. All communication flows through Memory Layer via Context Assembly.
+- Pattern per phase: Context Assembly reads Memory Layer → assembles context → passes to Claude → Claude produces output → phase module writes back to Memory Layer → Phase Gate Engine checks prerequisites before next phase opens.
+- Project Profile is a special case: written once by Tech-context, locked, read directly by every downstream phase. Never changes mid-build.
+
+**Phase Gate checks (in order):**
+- Discover: brainstorm artifact OR direct brief exists
+- Tech-context: discovery artifact exists
+- Shape Establishment: Project Profile exists
+- PRD-to-Plan: shape document exists
+- Build Execution (slice 1): backlog exists, slice selected
+- Build Execution (next slice): previous slice QA cleared
+- Deploy: all slices cleared, Phase Test passed
+
+**Project Profile amendment process:**
+- Profile is locked for the current slice, not forever. A stack or setup change discovered mid-build triggers a formal amendment.
+- Amendment opens between slices only. Phase Gate Engine blocks the next slice until amendment is reviewed and closed.
+- Amendment must capture: what changed, why, and what downstream artifacts are now stale (shape document, PRD, affected backlog slices).
+- Application surfaces the full cascade — does not leave the solo to figure out what's affected.
+- Amendment reviewer model (who approves when Ted is involved) → deferred to Session 4.
+
+
 3. Context assembly design — how does the application decide what to pass to Claude per phase? Selection logic. No full-blob passing.
 4. Letta memory schema — all three stores in detail. Store 1: framework knowledge. Store 2: Ren memory (relational + vector). Store 3: conversation log (identity-tagged).
 5. Ren's memory model — what does Ren hold, how is it structured, how does it stay current without manual curator work? Dreaming relevance if access resolved.
