@@ -427,6 +427,20 @@ Two modes, not one:
 - Ren's shared memory never receives content from exclusive projects. Only the fact of their existence is known.
 - Resolves the Ren trust problem cleanly — Ren remains trusted by both parties without becoming an NDA liability.
 
+**API layer — two surfaces:**
+
+**Front end → Han Solo application API**
+Chat messages in/out, project management, phase gate checks, memory panel state, user and key management, project visibility. Standard REST/WebSocket API owned entirely by Han Solo.
+
+**Claude → Han Solo tool API (hybrid model — confirmed viable)**
+Letta's native tools and custom Han Solo tools coexist cleanly in the same tool registry. No conflicts. Three categories:
+
+- **Letta native tools** — memory read/write (core, recall, archival). Battle-tested, works today, no reason to duplicate.
+- **Custom Han Solo tools** — phase gate checks, signal writing, portrait access, session brief retrieval. Han Solo-specific product logic.
+- **Validation wrapper** — sits between Claude's tool calls and sensitive functions. Enforces hard restrictions: Claude cannot touch key management, visibility settings, or user management. Letta's tool rules control sequencing but not access gating — our wrapper owns the enforcement.
+
+Claude never talks to the front end directly. Front end never talks to Claude directly. Han Solo is the hub for both.
+
 **Letta native capability mapping — major scope reduction:**
 
 Letta already provides production-grade infrastructure for everything we were planning to build from scratch. Han Solo is a product layer on top of Letta, not a full application build.
@@ -504,7 +518,7 @@ These are the questions that need answers before or during the design sessions. 
 | Session | Date | Outcome |
 |---|---|---|
 | 1 — Module Inventory | 2026-05-11 | Complete. 3 module categories, 8 infrastructure modules, 8 shared phase modules, 3 abstract phase modules with path-specific implementations. Platform model confirmed. Clone/fork capability defined. Stress test standard established. |
-| 2 — Application Architecture | Pending | — |
+| 2 — Application Architecture | 2026-05-11 | Complete. Flagged modules resolved. Module connection map defined. Context assembly design — three levers (purposeful declarations, context ceiling, post-generation trace check). Four memory stores finalized — Letta's three-tier model maps directly, major scope reduction confirmed. Sleeptime agents handle homegrown Dreaming. Ren's memory model — Store 4, living portraits, signal taxonomy, generated brief. Chat interface — custom UI, collapsible memory panel, one surface for all work. Ren present in every build session. Ted present during builds. Execution environment open. BYOK flexible key model — own key and sponsored key modes, upsell business model confirmed. Four-tier project visibility including NDA-bound exclusive tier. API layer — hybrid tool model confirmed viable, validation wrapper for Claude restrictions. |
 | 3 — Interface Design | Pending | — |
 | 4 — Collaboration Model | Pending | — |
 
