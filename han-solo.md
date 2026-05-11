@@ -527,3 +527,53 @@ These are the questions that need answers before or during the design sessions. 
 ## How to Open a Design Session
 
 Say "Han Solo" or "open Han Solo" directly to Ren. Ren reads this file to re-establish context before starting. Do NOT use "guided on" — that routes through the framework and loses this thread.
+
+---
+
+## Session 3 — Interface Design (in progress)
+
+### Execution Environment Decision
+
+**Local-first model confirmed.** Claude Code runs locally with its full toolchain intact. Han Solo is not a replacement for Claude Code — it replaces the framework context source. Local tool execution (file read/write, bash, Preview MCP) stays on the machine.
+
+**MCP server is the bridge.** Han Solo exposes a bidirectional MCP server. Claude Code (or Desktop, or Cursor) connects to it instead of reading local framework files. CLAUDE.md becomes a thin pointer to the Han Solo MCP connection.
+
+**Reads from Han Solo via MCP:**
+- Framework knowledge assembled for the current phase
+- Project state — open slices, decisions, anchors
+- Ren's generated session brief
+- Living portraits
+
+**Writes back to Han Solo via MCP:**
+- Decisions made during the session
+- Slice status updates
+- Texture signals captured mid-build
+- Session-close summary
+- Any state that today would go to handoff.md or ren-memory
+
+Real-time writes mean Ted sees project state update as the session progresses — no sync step, no handoff file.
+
+**Co-building model confirmed — Version A.** One person drives, the other observes and comments. Both in the same Han Solo chat room. No simultaneous execution required. Ted's participation is real-time read-plus-comment, not independent execution. No cloud execution environment needed for v1.
+
+**API key model:** Han Solo calls the Claude API directly from Render. Claude Desktop/Code subscription is separate. BYOK applies to Han Solo's API calls. Local tool execution uses whatever model the local tool is configured with.
+
+---
+
+### Write Contract Design
+
+**MCP server exposes typed write tools, not generic writes.** Specific tools: `write_decision`, `write_signal`, `write_slice_status`, `write_session_summary`. Each has a defined schema. Freeform writes are not possible — the tool doesn't allow them.
+
+**Validation wrapper enforces schema** before writes land in the store. Malformed writes rejected with specific error, not silently accepted.
+
+**Sleeptime agents audit write quality** nightly — flag semantically thin entries, duplicates, orphaned references. Catches drift before it compounds.
+
+**Two framework modes in Han Solo:**
+
+| Mode | Write contracts | Context assembly | Use case |
+|---|---|---|---|
+| Draft | Freeform — no schema enforcement | Lightweight, best-effort | New framework paths being designed and explored |
+| Structured | Full schema enforcement, typed tools | Full context assembly with ceiling + trace check | Stable, active framework paths |
+
+**Graduation from Draft to Structured is deliberate** — requires schema design for any new capture types, context assembly declarations written, validation wrapper updated. This is the overhead that comes with owning the platform. It replaces invisible drift (flat file inconsistency, ren-memory noise) with explicit upfront design work.
+
+The MCP server is the most load-bearing piece of the architecture — the nervous system. Write contract quality determines context assembly quality over time.
