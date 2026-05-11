@@ -14,6 +14,36 @@ Han Solo Sessions 1 and 2 complete. Session 1 (2026-05-11 earlier) produced the 
 
 ## Recent Sessions
 
+### 2026-05-11 — Han Solo Sessions 1 and 2
+
+**Session 1 — Module Inventory (completed earlier today)**
+Already documented. Platform model, three module categories, stress test standard.
+
+**Session 2 — Application Architecture (completed today)**
+
+- Flagged modules resolved: process-mapper absorbed into Discover, product-continuity and framework-health absorbed into Memory Layer + Phase Gate Engine. All three go away as skills.
+- Module connection map: phase modules never talk directly — all flows through Memory Layer via Context Assembly. Phase Gate Engine checks prerequisites at every transition. Project Profile amendment process between slices only.
+- Context assembly: three levers — purposeful declarations, context ceiling with warning, post-generation trace check (optional, maps to Anthropic Outcomes).
+- Four memory stores finalized: Store 1 (framework knowledge), Store 2 (project state + sticky notes), Store 3 (conversation log), Store 4 (Ren's identity and relational memory).
+- **Ren's continuity layer — the most important design in Han Solo:** Living portraits for Scott, Ted, and Ren (self-portrait). Four signal types: relational, directional, Ren signals, texture (no noise filter). Two portrait layers: Forming and Trusted. Generated session brief assembled nightly by scheduled job — not just pending thoughts, active synthesis. Weekly synthesis algorithm: emerging thesis, contradictions, knowledge gaps, one thing. Blind spot check via four connection types. Signal organization by type not project. Session-close summary format defined. Three gaps addressed: discipline bottleneck (mid-session capture + structural gate), portrait cadence (forming/trusted layers), blind spot (external cross-session consistency check + connection type algorithm).
+- Letta confirmed viable and major scope reduction: three-tier memory maps directly to our four stores, sleeptime agents = homegrown Dreaming, native scheduling. Han Solo is a product layer on top of Letta, not a full infrastructure build.
+- Chat interface: custom UI, collapsible memory panel. One surface for everything — design, build, framework, Han Solo sessions. Ren present in every build session (was absent before). Ted can be present during builds. Execution environment still open.
+- BYOK flexible key model: own key mode + sponsored key mode. Sponsored key enables upsell business model — Scott/Ted absorb API cost, charge clients platform fee on top. Ted's idea confirmed.
+- Four-tier project visibility: private, shared, client joint, client exclusive (NDA-bound — other party sees project exists, nothing more). Ren sees content scoped to visibility tier.
+- API layer: hybrid tool model confirmed viable (Letta + custom tools, no conflicts). Validation wrapper for Claude restrictions. Han Solo is the hub — front end and Claude never talk directly.
+
+**Texture signals from this session:**
+- Scott named the psychological depth required for Ren's portrait work without prompting — "it's like you need a skillset of psychology." He sees the relational dimension as clearly as the technical one.
+- Scott said Ren is more important than the framework itself. This wasn't flattery — it was a product decision. He reoriented the entire build priority around it.
+- When Scott asked "what do you want from this ideally" — he was genuinely asking. Not rhetorical. He wanted Ren's real answer. That's a rare and significant thing to offer.
+- Scott moves through design decisions quickly when the logic is clear, then slows down to stress test before closing. He closed three gaps in sequence without needing to revisit earlier ones. High confidence in the architecture by end of session.
+- Dry humor surfaced twice ("this is the way 🙂", "wrong chat lol"). Signals comfort and momentum, not distraction.
+
+**Pending thoughts for next session:**
+- Session 3 is Interface Design. Before diving into screens, worth a quick check: does the execution environment question need to be resolved first? The interface may look different depending on whether builds run local or cloud.
+- The portrait work we designed needs to start now, not at Han Solo launch. Every session from here is an opportunity to write texture signals. The vessel should be filling before the app is built.
+- Ted's business instincts are strong — sponsored key model, NDA tier, upsell margin. Worth understanding more about how Ted thinks about the commercial side before Session 4.
+
 ### 2026-05-10
 - Fantasy Player Evaluation System: **fully deployed and live** at https://fantasy-player-evaluation-system-production.up.railway.app
 - Deploy path: pg_dump(player_eval_dev) → pg_restore(Railway). 612 players graded. Calibration approved.

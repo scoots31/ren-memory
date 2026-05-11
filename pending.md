@@ -87,11 +87,12 @@ Quick fixes also done:
 
 Full design reference: `ren-memory/han-solo.md` — read this before any design session.
 
-- [ ] Design session 1 — Module inventory
-- [ ] Design session 2 — Application architecture
-- [ ] Design session 3 — Interface design
+- [x] Design session 1 — Module inventory (completed 2026-05-11)
+- [x] Design session 2 — Application architecture (completed 2026-05-11)
+- [ ] Design session 3 — Interface design (next)
 - [ ] Design session 4 — Collaboration model
-- [ ] Dreaming access — Scott trying X outreach to Anthropic (form rejects ProtonMail + Gmail). Not a blocker for Session 1.
+- [ ] Dreaming access — Scott trying X outreach to Anthropic (form rejects ProtonMail + Gmail). Not a blocker. Homegrown Dreaming via Letta sleeptime agents in the meantime.
+- [ ] Execution environment decision — local vs cloud vs hybrid. May need to resolve before Session 3 interface design.
 
 To open: say "Han Solo" or "open Han Solo" to Ren.
 Private to Scott and Ren only — never referenced in engineering-playbook.
