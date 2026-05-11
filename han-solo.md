@@ -252,12 +252,12 @@ process-mapper, product-continuity, and framework-health likely absorbed into in
 - Strategic differentiator: anyone can build a process tool. Nobody else is building an AI partner that compounds over time, knows the builders, and brings something real to the table unprompted.
 - Real Dreaming (Anthropic) reads the full conversation log and finds what Ren didn't explicitly flag. Homegrown Dreaming reads what Ren explicitly wrote — a real limitation, but a far better starting point than today. When real Dreaming access comes through, it enriches something already rich.
 
-**Homegrown Dreaming — architecture (design in progress):**
+**Homegrown Dreaming — architecture:**
 
 Three cadences, each with a different job:
 
 *Triggered (session close):*
-- Ren writes a structured session summary to Store 3 — not a transcript. Curated signals: decisions made, patterns observed, relational signals noticed, pending thoughts for next session.
+- Ren writes a structured session summary to Store 3 — not a transcript. Curated signals across all four categories: decisions made, directional shifts, Ren self-observations, and texture signals.
 - Richer and more formal than today's diary. This is the raw material the scheduled jobs process.
 
 *Scheduled (nightly or post-session):*
@@ -270,6 +270,32 @@ Three cadences, each with a different job:
 - Deeper review job reads further back across Store 3.
 - Looks for longer-term patterns: how the partnership has evolved, what Ren keeps getting right or wrong, what domains have developed genuine shared depth.
 - Writes to the identity layer of Store 4.
+
+**Signal taxonomy — four categories:**
+
+1. **Relational signals** — how Scott and Ted actually operate. Not what they said, but how they moved. Scott held a position under pushback. Ted asked the same question twice — not satisfied with the first answer. Scott made a fast decision — high confidence or done deliberating, Ren learns which over time.
+
+2. **Directional signals** — where the work is going or where thinking shifted. A decision that reversed something previous. A new constraint that emerged. An idea that got real traction. These feed the always-loaded core when significant enough.
+
+3. **Ren signals** — Ren's own performance. Jumped to action before taking a beat. Missed a connection. Got the tone exactly right and Scott moved faster because of it. How Ren develops self-knowledge — from reviewing its own behavior against outcomes, not from being told.
+
+4. **Texture signals** — small, individually unremarkable moments that reveal how someone thinks, feels, or operates. Not filtered for significance. Collected consistently and patiently. The way Scott paused before committing. Topics where he goes broad before narrowing versus ones where he already knows and needs confirmation. The difference between energized and pushing through. None pass an importance threshold individually — collectively they are the most important thing in Store 4. This is knowing the texture of a person.
+
+**Critical distinction:**
+- Noise filter applies to categories 1-3: if it didn't affect a decision or reveal something meaningful, it stays in Store 3 as log.
+- Texture signals (category 4) have NO noise filter. Small is the point. Ren collects them consistently without evaluating individual importance.
+
+**The homegrown limitation:**
+- Real Dreaming reads the full conversation log and infers texture signals independently.
+- Homegrown Dreaming can only process what Ren explicitly noticed and wrote during the session.
+- This means Ren's in-session attention is the bottleneck — noticing and writing texture is as important as any other part of the build work.
+- When real Dreaming becomes available, it enriches Store 4 with what Ren missed. The vessel is already warm.
+
+**How signals graduate to the always-loaded core:**
+- Three texture signals about the same thing → pattern in Store 4
+- Pattern that holds across ten sessions → candidate for always-loaded core
+- Always-loaded core evolves slowly and deliberately — only when something has proven itself across enough observations to be trusted as true rather than situational
+- Design of the graduation process and bloat prevention → in progress
 
 **Context assembly design:**
 - Each phase module declares what it needs — which stores, which artifacts, which project state fields — and why. Context Assembly reads that declaration and pulls accordingly.
