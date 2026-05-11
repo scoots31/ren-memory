@@ -407,6 +407,26 @@ Two modes, not one:
 - Ted identified this as the upsell model. Infrastructure is already built for it — sponsored key is a small extension of the own-key model, not a separate build.
 - If Han Solo opens broadly, this becomes the commercial engine.
 
+**Multi-tenant identity and project visibility — four tiers:**
+
+| Tier | Who sees content | Ren visibility |
+|---|---|---|
+| Private | Owner only | Full — Ren is each person's individual partner |
+| Shared | Scott and Ted both | Full — complete context for both |
+| Client-facing (joint) | Scott and Ted see everything. Client sees designated view only | Full on builder side. Client view scoped. |
+| Client-facing (exclusive) | Owner only. Other party sees project exists, nothing more | Project existence only. Content never flows into shared Ren memory. |
+
+**Ownership model:**
+- Every project has a designated owner. Owner controls visibility tier.
+- Shared projects can have co-owners. Co-owners can change visibility.
+- Non-owners can contribute but cannot change access.
+
+**Exclusive tier design:**
+- Real-world driver: NDA-bound client work. Ted signs an NDA — Scott cannot see content, conversations, or build details.
+- Scott can see the project name and status in the system. Nothing else. Platform enforces this structurally.
+- Ren's shared memory never receives content from exclusive projects. Only the fact of their existence is known.
+- Resolves the Ren trust problem cleanly — Ren remains trusted by both parties without becoming an NDA liability.
+
 **Letta native capability mapping — major scope reduction:**
 
 Letta already provides production-grade infrastructure for everything we were planning to build from scratch. Han Solo is a product layer on top of Letta, not a full application build.
