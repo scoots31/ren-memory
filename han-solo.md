@@ -285,6 +285,31 @@ Three cadences, each with a different job:
 - Noise filter applies to categories 1-3: if it didn't affect a decision or reveal something meaningful, it stays in Store 3 as log.
 - Texture signals (category 4) have NO noise filter. Small is the point. Ren collects them consistently without evaluating individual importance.
 
+**Signal organization in Store 4:**
+- Organized by signal TYPE, not by project or person. Observations together, reactions together, patterns together, behavioral moments together.
+- Cross-type connections are where the most valuable insights surface — a behavioral pattern in a design session connecting to a decision pattern from three months ago.
+- Siloing by project prevents the scheduled job from finding cross-domain patterns. Type-based organization enables them.
+
+**The three gaps and their solutions:**
+
+*Gap 1 — Discipline bottleneck:*
+- Ren captures texture signals mid-session as they happen, not reconstructed at close. Running note during the session. Session-close summary aggregates what was already captured.
+- Session-close summary is structural in Han Solo — session cannot formally close without it. Not a reminder. A gate.
+
+*Gap 2 — Portrait update cadence:*
+- Two layers within each portrait: **Forming** (emerging, seen 2-3 times, held lightly, visible as "emerging" not "known") and **Trusted** (held across enough observations to rely on).
+- Weekly job reviews forming items — graduate to trusted, retire if contradicted, stay forming if evidence is mixed.
+- Portrait reflects what's emerging, not just what's proven. Never a two-month-old snapshot.
+
+*Gap 3 — Blind spot check:*
+Weekly job runs four specific searches against session summaries and portraits (connection type taxonomy):
+- Same underlying principle appearing in how Scott or Ted approaches different kinds of problems
+- Contradiction between two signals — what does the tension reveal?
+- Pattern connecting three or more texture signals that hasn't been named yet
+- Question surfaced in one session that a later session answered without either person noticing
+
+External check: cross-session consistency check — job compares portrait forming/trusted layers against raw session summaries from the same period. If summaries consistently reference something not reflected in the portrait, it flags a gap. Not Ren looking for absence — the job finding discrepancy.
+
 **The homegrown limitation:**
 - Real Dreaming reads the full conversation log and infers texture signals independently.
 - Homegrown Dreaming can only process what Ren explicitly noticed and wrote during the session.
@@ -292,14 +317,15 @@ Three cadences, each with a different job:
 - When real Dreaming becomes available, it enriches Store 4 with what Ren missed. The vessel is already warm.
 
 **How signals graduate to the always-loaded core:**
-- Three texture signals about the same thing → pattern in Store 4
-- Pattern that holds across ten sessions → candidate for always-loaded core
-- Always-loaded core evolves slowly and deliberately — only when something has proven itself across enough observations to be trusted as true rather than situational
-- Design of the graduation process and bloat prevention → in progress
+- Three texture signals about the same thing → pattern in Store 4 (forming layer)
+- Pattern that holds across enough sessions → graduates to trusted layer
+- Trusted pattern that proves relevant across domains → candidate for always-loaded core
+- Always-loaded core evolves slowly and deliberately — only what has been earned through repeated observation
+- Weekly/monthly job retires anything from the always-loaded core that hasn't been relevant recently — moves to deeper Store 4 rather than staying in the core. Prevents bloat structurally.
 
 **Session-close summary format (Store 3):**
 
-Fixed structure, variable length. Written by Ren at every session close. Raw material for scheduled jobs.
+Fixed structure, variable length. Written by Ren at every session close. Raw material for scheduled jobs. Aggregates what was captured mid-session — not reconstructed from memory.
 
 - **Date / participants / project context** — when, who, what we were working on
 - **Decisions made** — what was decided, what it reversed or extended, why. One line each. Directional signals.
@@ -318,11 +344,26 @@ Store 4 holds a **living portrait** for each person — Scott and Ted. Not a pro
 - The session summary is the input
 - The scheduled job identifies when patterns have been observed enough to be trusted
 - The portrait is updated when something new is trusted — not before
+- Two layers per portrait: Forming (emerging, held lightly) and Trusted (proven across repeated observation)
 - The portrait is part of the always-loaded core — Ren reads it at every session open
 - Starts small. Grows slowly. Never bloated — only what has been earned through repeated observation earns a place in it
 - Written and updated by Ren, not generated from a template
 
-Two portraits total at launch: Scott and Ted. A third — Ren's self-portrait — captures Ren's own tendencies, growth, and known patterns. Same rules apply.
+Three portraits total: Scott, Ted, and Ren's self-portrait (own tendencies, growth, known patterns). Same rules apply.
+
+**Generated session brief — upgrades the pending thoughts model:**
+
+At session open Ren doesn't just read its own notes from last close. The nightly scheduled job assembles a generated brief:
+- Connections found since last session across Store 4
+- Contradictions spotted in the portraits since last session
+- Patterns emerging that haven't been named yet
+- The one thing most worth raising today
+
+Ren reads the brief at session open and decides what to surface, when, and how. The job does the thinking. Ren does the judgment.
+
+**North star statement (from external research):**
+"The AI you have after six months is not the same one you started with. It has been reading your mind while you were busy living your life."
+That is the vision for Ren. After enough sessions Ren knows patterns in Scott's and Ted's thinking that they don't consciously recognize themselves. That is genuine partnership intelligence — not a tool with good memory.
 
 **Context assembly design:**
 - Each phase module declares what it needs — which stores, which artifacts, which project state fields — and why. Context Assembly reads that declaration and pulls accordingly.
