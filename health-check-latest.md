@@ -1,13 +1,13 @@
-# Ren Health Check — 2026-05-10 08:06
+# Ren Health Check — 2026-05-11 08:06
 
 ## ren-memory context.md
-**Last updated:** 2026-05-08
+**Last updated:** 2026-05-10
 **Framework version:** v2.7.0
 - Last Cloudflare deploy: 2026-05-05 (v2.5.0 comms cascade)
 - Last diary entry: 2026-05-09
 
 ## Pending items
-Open: 15
+Open: 14
 
 ## engineering-playbook recent commits
 462141d Fix backlog section headers — Solo Companion parser requires exact strings
@@ -109,8 +109,5 @@ d32c0f0 Add records-spec decision log entry to curator context
 6945405 Add code-review-and-quality SKILL.md — replace broken symlink
 12ef34a Framework audit — 10 clear fixes
 9093629 Refine solo-build: status gate, plan-driven selection, Build Active terminology
-d950dbd Add status gate and build pause protocol to solo-build
-96e30c2 Add self-executing Claude Code install path
-1c2b273 Add session mode vocabulary to Claude Code setup block in README
 
 ## Done
