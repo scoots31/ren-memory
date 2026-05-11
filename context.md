@@ -1,6 +1,6 @@
 # Ren — Session Context
 
-**Last updated:** 2026-05-08
+**Last updated:** 2026-05-10
 **Framework version:** v2.7.0
 **Updated by:** Ren (session close)
 
@@ -13,6 +13,16 @@ v2.7.0 shipped — Full rebuild of the build execution model. solo-build rewritt
 ---
 
 ## Recent Sessions
+
+### 2026-05-10
+- Fantasy Player Evaluation System: **fully deployed and live** at https://fantasy-player-evaluation-system-production.up.railway.app
+- Deploy path: pg_dump(player_eval_dev) → pg_restore(Railway). 612 players graded. Calibration approved.
+- Lesson locked: pg_dump first always. Re-syncing from APIs when local DB exists is the wrong path. Costs hours, misses data that can't be re-synced. Saved to memory + handoff.
+- Added graceful nfl_data_py fallback (Python 3.13 incompatible). Contracts fields blank until resolved.
+- Added sync-players, sync-league, sync-weekly-results endpoints — required to bootstrap calibration on a clean DB.
+- Garden planner: local DB confirmed ready (113 plants, 5 users, 21 calendar dates). Same pg_dump pattern applies on deploy.
+- Open: is_scott franchise flag unset, PFF upload pending, contracts sync blocked on nfl_data_py py313 support.
+- ★★★★★ Scott: "almost a decade in the making — excel → tableau → this. A dream come true."
 
 ### 2026-05-08
 - v2.7.0: solo-build full rewrite — correlation gate, builder QA manifest (no self-cert), Review Agent owns Done gate, terminal command rule, preview port fix

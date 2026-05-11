@@ -107,7 +107,7 @@ Private to Scott and Ren only — never referenced in engineering-playbook.
 ## Apps (~/Apps)
 
 - [ ] Hair Stylist App — blocked on user interviews; interview guide needed when ready
-- [ ] Fantasy Football Tool — data session needed (MFL API, consistency score)
+- [x] Fantasy Football Tool — **deployed live** (2026-05-10). Open: is_scott flag, PFF upload, contracts sync (nfl_data_py py313 incompatible)
 - [ ] Chase the Light SwiftUI product — in design phase
 
 ## Garden Planner — Data Re-seed Blocked on Plant List
