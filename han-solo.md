@@ -390,6 +390,23 @@ Ren reads the brief at session open and decides what to surface, when, and how. 
 
 3. **Execution environment is an open question.** The chat room is where the conversation happens. Where the work actually runs — local machine, cloud, or combination — is a separate architectural decision not yet made. Interface and execution environment are independent concerns. To be resolved in Session 2 or Session 3.
 
+**BYOK key management — flexible key model:**
+
+Two modes, not one:
+
+- **Own key mode** — user provides their own Anthropic API key. Stored encrypted per user. API spend is theirs. Default for Scott and Ted as builders.
+- **Sponsored key mode** — an owner-level user designates that a specific user or group runs on a key they control. Han Solo routes API calls through the designated key. Client never touches an API key — completely transparent to them.
+
+**Permission rules:**
+- Only owner-level users can designate a sponsored key arrangement. Cannot be self-assigned.
+- Spend visibility: whoever owns the sponsored key can see consumption per sponsored user. No billing surprises.
+- Sponsored users never see or know about the key being used.
+
+**Business model implication:**
+- Sponsored key mode enables a usage-based pricing layer — Scott and Ted absorb API cost, charge clients a platform fee on top. The margin lives in the spread.
+- Ted identified this as the upsell model. Infrastructure is already built for it — sponsored key is a small extension of the own-key model, not a separate build.
+- If Han Solo opens broadly, this becomes the commercial engine.
+
 **Letta native capability mapping — major scope reduction:**
 
 Letta already provides production-grade infrastructure for everything we were planning to build from scratch. Han Solo is a product layer on top of Letta, not a full application build.
