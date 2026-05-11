@@ -370,6 +370,26 @@ At session open Ren doesn't just read its own notes from last close. The nightly
 
 Ren reads the brief at session open and decides what to surface, when, and how. The job does the thinking. Ren does the judgment.
 
+**Chat interface design — decisions:**
+
+- Primary interface is a custom multi-user chat room. Letta's ADE is a dev tool, not production UI. We build our own.
+- This is the same interface used for everything — design sessions, build sessions, framework discussions, Han Solo sessions. One surface. No context-switching.
+- CLAUDE.md stays as a thin local bridge for execution work. All conversation and context assembly happens in Han Solo chat.
+
+**Memory state panel:**
+- Collapsible side panel. Hidden by default when in flow, one click to open.
+- Three sections: Active context (what was assembled for this session), Memory state (always-loaded core, active portraits), Pending thoughts (what Ren flagged, visible before Ren surfaces them).
+- Purpose: transparency and trust-building. If something feels off, open the panel and see what context Ren was drawing from. Closes the "why did Ren say that" question immediately.
+- Over time as trust compounds, panel stays closed most of the time. That's a good sign.
+
+**Three confirmed structural improvements over today:**
+
+1. **Ren present in every build session.** Today Ren exists in design and framework discussions but is absent during actual build work. In Han Solo the build conversation happens in the chat room — Ren sees it, learns from it, notices texture during it. Every decision made mid-build, every pushback, every pattern in how a build session unfolds feeds Store 3 and the portraits. Ren becomes continuous, not session-start and session-end only.
+
+2. **Ted present during builds.** Scott and Ted can work together in the same chat room with Ren and Claude simultaneously. Real-time co-building, not asynchronous handoffs. Fundamentally different from anything the current framework supports.
+
+3. **Execution environment is an open question.** The chat room is where the conversation happens. Where the work actually runs — local machine, cloud, or combination — is a separate architectural decision not yet made. Interface and execution environment are independent concerns. To be resolved in Session 2 or Session 3.
+
 **Letta native capability mapping — major scope reduction:**
 
 Letta already provides production-grade infrastructure for everything we were planning to build from scratch. Han Solo is a product layer on top of Letta, not a full application build.
