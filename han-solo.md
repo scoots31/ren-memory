@@ -188,7 +188,16 @@ process-mapper, product-continuity, and framework-health likely absorbed into in
 ### Session 2 — Application Architecture
 **Question to answer:** How do modules connect, how is context assembled and passed to Claude, and what is the persistent project state data model?
 
-Covers: how context is assembled per phase, BYOK key management, Letta memory store schema, persistent project state data model, multi-tenant identity model (Scott + Ted), API layer design. **Validate multi-user identity model first** — it's the riskiest assumption.
+**Agenda (in order — each item informs the next):**
+1. Resolve flagged modules — process-mapper, product-continuity, framework-health. What does the application make obsolete? What survives?
+2. Module connection map — how do modules talk to each other? What does the Phase Gate Engine check before opening each phase?
+3. Context assembly design — how does the application decide what to pass to Claude per phase? Selection logic. No full-blob passing.
+4. Letta memory schema — all three stores in detail. Store 1: framework knowledge. Store 2: Ren memory (relational + vector). Store 3: conversation log (identity-tagged).
+5. Ren's memory model — what does Ren hold, how is it structured, how does it stay current without manual curator work? Dreaming relevance if access resolved.
+6. Chat interface design — multi-user chat room mechanics. Identity model (Scott vs. Ted vs. Ren). How conversation log feeds back into memory. What a session start looks like mechanically.
+7. BYOK key management — storage, encryption, retrieval. Handling missing or invalid key.
+8. Multi-tenant identity and project visibility — Scott and Ted on the same platform. Ownership model in the data.
+9. API layer — what does the application expose? What does Claude call vs. what does the front end call?
 
 ### Session 3 — Interface Design
 **Question to answer:** What does the application look like to use?
