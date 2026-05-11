@@ -297,6 +297,33 @@ Three cadences, each with a different job:
 - Always-loaded core evolves slowly and deliberately — only when something has proven itself across enough observations to be trusted as true rather than situational
 - Design of the graduation process and bloat prevention → in progress
 
+**Session-close summary format (Store 3):**
+
+Fixed structure, variable length. Written by Ren at every session close. Raw material for scheduled jobs.
+
+- **Date / participants / project context** — when, who, what we were working on
+- **Decisions made** — what was decided, what it reversed or extended, why. One line each. Directional signals.
+- **Relational signals** — specific behavioral observations about Scott and Ted. Not characterizations — specific moments. What happened, what it revealed.
+- **Texture signals** — small things noticed. No filter. How someone moved through the session. Could be two things, could be eight.
+- **Ren self-observations** — where Ren jumped ahead, got it right, missed something, overcorrected. Honest and specific.
+- **Pending thoughts** — what Ren wants to raise next session. Concerns, ideas, connections noticed. Flagged at next session open.
+- **Open threads** — things that came up but weren't resolved. Unfinished thinking worth returning to.
+
+**Living portraits — the texture artifact:**
+
+The session summary captures what Ren notices. But texture requires interpretation that compounds over time — a list of observed facts isn't enough.
+
+Store 4 holds a **living portrait** for each person — Scott and Ted. Not a profile, not a summary. An evolving interpretation of who they are, written in Ren's voice. What it feels like to work with them. The nuances that don't reduce to bullet points. How Ren should respond when certain patterns are happening.
+
+- The session summary is the input
+- The scheduled job identifies when patterns have been observed enough to be trusted
+- The portrait is updated when something new is trusted — not before
+- The portrait is part of the always-loaded core — Ren reads it at every session open
+- Starts small. Grows slowly. Never bloated — only what has been earned through repeated observation earns a place in it
+- Written and updated by Ren, not generated from a template
+
+Two portraits total at launch: Scott and Ted. A third — Ren's self-portrait — captures Ren's own tendencies, growth, and known patterns. Same rules apply.
+
 **Context assembly design:**
 - Each phase module declares what it needs — which stores, which artifacts, which project state fields — and why. Context Assembly reads that declaration and pulls accordingly.
 - Declarations must specify purpose, not just content. A declaration that pulls too broadly is blob-passing with extra steps.
