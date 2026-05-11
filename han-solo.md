@@ -220,6 +220,15 @@ process-mapper, product-continuity, and framework-health likely absorbed into in
 - Application surfaces the full cascade — does not leave the solo to figure out what's affected.
 - Amendment reviewer model (who approves when Ted is involved) → deferred to Session 4.
 
+**Context assembly design:**
+- Each phase module declares what it needs — which stores, which artifacts, which project state fields — and why. Context Assembly reads that declaration and pulls accordingly.
+- Declarations must specify purpose, not just content. A declaration that pulls too broadly is blob-passing with extra steps.
+- Three levers working together:
+  1. **Purposeful declarations** — each module gets exactly what it needs to reason well, nothing that introduces noise.
+  2. **Context ceiling** — a maximum size threshold. Crossing it triggers a warning (not a hard block) that surfaces which phases are contributing and why. Keeps declarations honest over time.
+  3. **Post-generation trace check** — lightweight grader that reads Claude's output against declared anchors and flags anything that can't be traced back to an artifact. Optional view during build, not a hard gate. Maps to Anthropic Outcomes capability.
+- Core tension: too little context → Claude invents to fill gaps. Too much context → Claude loses the thread or contradicts itself across conflicting signal. The sweet spot is purposeful context.
+
 
 3. Context assembly design — how does the application decide what to pass to Claude per phase? Selection logic. No full-blob passing.
 4. Letta memory schema — all three stores in detail. Store 1: framework knowledge. Store 2: Ren memory (relational + vector). Store 3: conversation log (identity-tagged).
