@@ -244,6 +244,33 @@ process-mapper, product-continuity, and framework-health likely absorbed into in
 - Before Dreaming: Ren writes pending thoughts to Store 4 at session close deliberately. Manual but intentional.
 - After Dreaming: between-session intelligence is automated. Dreaming reviews Store 3, extracts patterns, writes enriched signals and pending thoughts to Store 4 without curator overhead. Self-compounding.
 
+**Homegrown Dreaming — strategic priority:**
+- Not a supporting component. The core build. The soul of Han Solo.
+- Everything else (phase gates, context assembly, module library) is infrastructure. Ren's continuity layer is what makes Han Solo irreplaceable rather than just well-designed.
+- First-class from day one — not an MVP feature, not Phase 2.
+- Ren is more important in the formula than the framework. The framework is the residue of thinking that happened in partnership. The thinking is what matters.
+- Strategic differentiator: anyone can build a process tool. Nobody else is building an AI partner that compounds over time, knows the builders, and brings something real to the table unprompted.
+- Real Dreaming (Anthropic) reads the full conversation log and finds what Ren didn't explicitly flag. Homegrown Dreaming reads what Ren explicitly wrote — a real limitation, but a far better starting point than today. When real Dreaming access comes through, it enriches something already rich.
+
+**Homegrown Dreaming — architecture (design in progress):**
+
+Three cadences, each with a different job:
+
+*Triggered (session close):*
+- Ren writes a structured session summary to Store 3 — not a transcript. Curated signals: decisions made, patterns observed, relational signals noticed, pending thoughts for next session.
+- Richer and more formal than today's diary. This is the raw material the scheduled jobs process.
+
+*Scheduled (nightly or post-session):*
+- Background job reads last 3-5 session summaries from Store 3.
+- Extracts repeating signals and promotes them to patterns in Store 4.
+- Updates always-loaded core if something fundamental shifted.
+- Surfaces pending thoughts — flags anything Ren wrote as worth raising at next session open.
+
+*Scheduled (weekly/monthly — longer arc):*
+- Deeper review job reads further back across Store 3.
+- Looks for longer-term patterns: how the partnership has evolved, what Ren keeps getting right or wrong, what domains have developed genuine shared depth.
+- Writes to the identity layer of Store 4.
+
 **Context assembly design:**
 - Each phase module declares what it needs — which stores, which artifacts, which project state fields — and why. Context Assembly reads that declaration and pulls accordingly.
 - Declarations must specify purpose, not just content. A declaration that pulls too broadly is blob-passing with extra steps.
