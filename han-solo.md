@@ -577,3 +577,37 @@ Real-time writes mean Ted sees project state update as the session progresses �
 **Graduation from Draft to Structured is deliberate** — requires schema design for any new capture types, context assembly declarations written, validation wrapper updated. This is the overhead that comes with owning the platform. It replaces invisible drift (flat file inconsistency, ren-memory noise) with explicit upfront design work.
 
 The MCP server is the most load-bearing piece of the architecture — the nervous system. Write contract quality determines context assembly quality over time.
+
+---
+
+### MCP Bridge — Finalized Design
+
+**The Claude Interface Layer** — formal boundary between Claude (whatever tool, wherever running) and Han Solo. Core infrastructure module alongside Memory Layer, Context Assembly, Phase Gate Engine.
+
+**One MCP server on Render.** Not two versions, not local install. Clients connect remotely over HTTP/SSE. The only local piece is Claude Code configuration — URL, auth token, project ID. Lives in the thin local CLAUDE.md pointer.
+
+**Three connection origins, one server:**
+- Scott's local Claude Code → connects remotely to Han Solo MCP on Render
+- Ted's local Claude Code/Desktop → connects remotely to same server
+- Han Solo cloud interface → connects internally on Render
+
+**Session origin determined by authentication.** Who connected and how. Read/write contracts are identical regardless of origin. API key handling differs:
+
+| Origin | API call owner | Key source |
+|---|---|---|
+| Local Claude Code | Claude Code (Scott's machine) | Scott's locally configured key |
+| Han Solo cloud interface | Han Solo application layer | BYOK encrypted key from store |
+
+**Implication for v1:** usage tracking and sponsored key mode only apply to sessions originating from Han Solo's own interface. Local Claude Code sessions make their own API calls — Han Solo has no visibility into them. Acceptable for v1.
+
+**Phase awareness — Option C (hybrid):**
+- Project state in Han Solo stores is the source of truth for current phase
+- Phase Gate Engine owns that state
+- When MCP connection opens, Han Solo reads project state and assembles context accordingly — Claude doesn't have to declare anything
+- Claude can signal intent to change phase (start new phase, reopen previous)
+- Phase Gate Engine checks prerequisites before allowing any phase change
+- No separate sync step — shared project state in stores is the shared ground truth for all connected clients
+
+**Authentication is load-bearing.** MCP server checks identity before serving anything — determines which project to assemble context for, where writes land, what visibility tier applies.
+
+**Standard local artifact per project:** thin CLAUDE.md containing MCP server URL, user token, project ID. Nothing else. All framework knowledge and project state served from Han Solo cloud.
