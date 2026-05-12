@@ -1,15 +1,16 @@
-# Ren Health Check — 2026-05-11 08:06
+# Ren Health Check — 2026-05-12 08:05
 
 ## ren-memory context.md
-**Last updated:** 2026-05-10
+**Last updated:** 2026-05-11
 **Framework version:** v2.7.0
 - Last Cloudflare deploy: 2026-05-05 (v2.5.0 comms cascade)
 - Last diary entry: 2026-05-09
 
 ## Pending items
-Open: 14
+Open: 21
 
 ## engineering-playbook recent commits
+80043b4 Enforce plain language + technical description at build gates
 462141d Fix backlog section headers — Solo Companion parser requires exact strings
 ef4629a Design library: surface review links, filter options without them
 da194b1 v2.7.0: Rebuild solo-build + new Review Agent skill
@@ -88,26 +89,5 @@ a734302 Add session metrics log for framework comparison tracking
 22ea984 Add versioned CHANGELOG, release tagging protocol, projects.md isolation
 c456257 Remove personal project paths from repo — projects.md is now local-only
 10c7f1d Enforce builder verification discipline: pre-build read, evidence-based self-check, review_url, stuck protocol
-5ad12da Mark all framework backlog items resolved — verification pass complete
-54a5a83 Add records-spec.md and new guide pages to curator context file index
-10d9e20 Add April 27 blog entry — Canonical Records specification release
-9af130f Align comms docs with canonical record format and status chain
-1f77d4a Add Backlog Status Reference page to communications docs
-d32c0f0 Add records-spec decision log entry to curator context
-677d1ae Align solo-qa and phase-test with canonical record status chain
-6007730 Update solo-build — builder confirmation, re-phasing protocol, status chain
-68938ed Update prd-to-plan — full deliverable/phase records, backlog write protocol
-75e265b Update data-scaffold — Step 3.5 fills slice data anchors in backlog
-80ab2d2 Update design-review — full slice record format, new Ready gate
-59525f1 Add records-spec.md — canonical backlog record formats
-274d7e2 Update curator-context decisions log — language pass
-150074d Framework-wide language pass — eliminate soft/suggestive directives
-739aecd Fix solo-build: session-start reading, design enforcement, backlog timing, commenting, terminal execution
-039f487 Comms docs reconciliation pass — mode terminology and named-resume phrase
-150ede4 Add curator-context.md — framework institutional memory (Step 2 of audit initiative)
-2244928 Delete agent-room — external download, not framework-native
-6945405 Add code-review-and-quality SKILL.md — replace broken symlink
-12ef34a Framework audit — 10 clear fixes
-9093629 Refine solo-build: status gate, plan-driven selection, Build Active terminology
 
 ## Done
