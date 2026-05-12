@@ -132,7 +132,7 @@ Session 3 complete. Session 4 deferred until v1 core is running.
   - [x] Write first portrait blocks — scott_portrait_forming, ren_portrait_forming
   - [x] Write seed signals — 8 signals in archival memory, Voyage AI embeddings live (2026-05-12)
 - [x] Chat UI — shipped 2026-05-12. `/` serves chat shell; Ren gold / Scott blue / Ted green identity. Memory panel (3 sections). Light/dark mode. 5s poll for multi-user sync. Deployed to Render via GitHub push.
-- [ ] Ren's memory seeded — ren-memory + MemPalace migrated, notes layer seeded
+- [x] Ren's memory seeded — 107 passages: 7 project summaries, ren-memory file chunks, 20 wing_ren drawers, 63 projects drawers (2026-05-12). Notes layer pending Ted conversation.
 - [ ] Session brief — nightly sleeptime job running, brief waiting at session open
 - [ ] Private messaging — @mention (quick) and private thread (sustained)
 - [ ] File/image sharing in chat — upload files, paste screenshots from clipboard, vision input passed to Ren via Letta messages API
