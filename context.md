@@ -209,14 +209,16 @@ Server wired into Claude Code settings (`~/.claude/settings.json`) as `han-solo`
 
 **15 tools live:** read_core_memory, write_core_memory, list_core_memory_blocks, write_signal, search_signals, write_session_summary, get_project_state, check_phase_gate, advance_phase, record_artifact, get_session_brief, write_pending_thoughts, read_portrait, write_portrait, read_all_portraits.
 
-**Key implementation notes:**
-- FastMCP transport_security must be disabled (DNS rebinding check blocks non-localhost hosts with 421)
-- FastMCP's streamable_http_app lifespan must be composed with our custom lifespan (not nested as sub-app)
-- Auth uses raw ASGI middleware, NOT Starlette BaseHTTPMiddleware (which breaks SSE streaming)
-- Ren agent `ren-v1` created in Letta: `agent-44d4a28a-9d66-4aea-b327-2f77b23359ef`
-- Letta embedding config: `anthropic` type, `voyage-3` model, `embedding_dim: 1024`
-- Lazy init for Ren agent ID — if Letta sleeping at MCP startup, agent resolved on first tool call
-- Health shows `degraded` until first tool call when Letta was asleep at startup (expected behavior)
+**Ren agent:** `ren-v1`, ID `agent-44d4a28a-9d66-4aea-b327-2f77b23359ef`
+
+**Full deployment challenge log:** `~/Developer/han-solo/DEPLOYMENT.md` — 14 challenges documented with root cause and fix. Read before touching this stack.
+
+**Key architectural decisions (non-obvious, will bite you if forgotten):**
+- FastMCP DNS rebinding protection disabled — blocks non-localhost hosts by default with 421. Bearer token auth is the real gate.
+- FastMCP session manager lifespan must be COMPOSED with custom lifespan, not nested as Starlette sub-app. Sub-app lifespans don't fire.
+- Auth uses raw ASGI middleware — `BaseHTTPMiddleware` buffers responses and breaks SSE streaming.
+- Letta embedding type is `anthropic` (not `voyageai`) + `embedding_dim: 1024` required.
+- Lazy agent ID init — if Letta sleeping at MCP startup, health reports degraded but self-heals on first tool call.
 
 **Next: Phase 3 — seed Ren agent memory** (always_loaded_core, pending_thoughts, portrait blocks, signals).
 
