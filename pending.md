@@ -130,8 +130,7 @@ Session 3 complete. Session 4 deferred until v1 core is running.
   - [x] Write `always_loaded_core` — framework context, working norms, relationship essentials
   - [x] Write initial `pending_thoughts` — carry-forward from ren-memory
   - [x] Write first portrait blocks — scott_portrait_forming, ren_portrait_forming
-  - [x] Write seed signals — stored in `seed_signals` core block (archival embedding blocked, see challenge #15 in DEPLOYMENT.md)
-  - [ ] **Archival embedding** — needs OpenAI key or Letta Cloud to unblock. Fix before Chat UI archival search.
+  - [x] Write seed signals — 8 signals in archival memory, Voyage AI embeddings live (2026-05-12)
 - [ ] Chat UI — Scott and Ted in same room, Ren present, identity markers, light/dark mode
 - [ ] Ren's memory seeded — ren-memory + MemPalace migrated, notes layer seeded
 - [ ] Session brief — nightly sleeptime job running, brief waiting at session open
