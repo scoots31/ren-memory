@@ -126,11 +126,12 @@ Session 3 complete. Session 4 deferred until v1 core is running.
 **V1 core build sequence:**
 - [x] Letta on Render — `han-solo-letta.onrender.com`, v0.16.7, PostgreSQL + pgvector (2026-05-12)
 - [x] Han Solo MCP server — 15 tools live at `han-solo-mcp.onrender.com/mcp`, wired into Claude Code (2026-05-12)
-- [ ] **Phase 3 — Seed Ren agent memory** ← next
-  - [ ] Write `always_loaded_core` — framework context, working norms, relationship essentials
-  - [ ] Write initial `pending_thoughts` — carry-forward from ren-memory
-  - [ ] Write first portrait blocks — scott_portrait_forming, ren_portrait_forming
-  - [ ] Write a few seed signals — relational and texture from sessions so far
+- [x] **Phase 3 — Seed Ren agent memory** ← complete (2026-05-12)
+  - [x] Write `always_loaded_core` — framework context, working norms, relationship essentials
+  - [x] Write initial `pending_thoughts` — carry-forward from ren-memory
+  - [x] Write first portrait blocks — scott_portrait_forming, ren_portrait_forming
+  - [x] Write seed signals — stored in `seed_signals` core block (archival embedding blocked, see challenge #15 in DEPLOYMENT.md)
+  - [ ] **Archival embedding** — needs OpenAI key or Letta Cloud to unblock. Fix before Chat UI archival search.
 - [ ] Chat UI — Scott and Ted in same room, Ren present, identity markers, light/dark mode
 - [ ] Ren's memory seeded — ren-memory + MemPalace migrated, notes layer seeded
 - [ ] Session brief — nightly sleeptime job running, brief waiting at session open
@@ -143,4 +144,4 @@ Session 3 complete. Session 4 deferred until v1 core is running.
 **Session 4 — Collaboration Model — deferred until v1 is live**
 - Ownership model, visibility settings UI, key management UI, full nav
 
-**Deployment reference:** `~/Developer/han-solo/DEPLOYMENT.md` — 14 challenges logged. Read before touching the stack.
+**Deployment reference:** `~/Developer/han-solo/DEPLOYMENT.md` — 15 challenges logged. Read before touching the stack.
