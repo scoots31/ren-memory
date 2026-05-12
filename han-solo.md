@@ -2,7 +2,7 @@
 
 **Codename:** Han Solo — private to Scott and Ren only. Never referenced in engineering-playbook or any shared artifact.
 **Created:** 2026-05-11
-**Status:** Pre-build. Four design sessions required before any build begins.
+**Status:** V1 build in progress. Design sessions 1–3 complete. Session 4 deferred until after v1 core is running. Letta and MCP server live as of 2026-05-12.
 
 ---
 
@@ -681,3 +681,31 @@ Three private channels: Scott↔Ren, Ted↔Ren, Scott↔Ted (no Ren present).
 |---|---|---|
 | 3 — Interface Design | 2026-05-11 | Complete for v1 scope. Chat first, Ren's brief, private messaging (two modes), memory panel, notes layer (partially designed). Full nav and dashboard deferred. |
 | 4 — Collaboration Model | Pending — deferred until after v1 core is running | — |
+
+---
+
+## V1 Build Status
+
+**Last updated:** 2026-05-12
+
+| Component | Status | Notes |
+|---|---|---|
+| han-solo-db | Live | PostgreSQL 16 + pgvector, Render, Oregon |
+| han-solo-letta | Live | Letta v0.16.7 at `han-solo-letta.onrender.com` |
+| han-solo-mcp | Live | 15 tools at `han-solo-mcp.onrender.com/mcp` |
+| Ren agent (ren-v1) | Created | ID: `agent-44d4a28a-9d66-4aea-b327-2f77b23359ef` |
+| Claude Code wiring | Done | `han-solo` server in `~/.claude/settings.json` |
+| Memory seeding | Not started | Phase 3 — next |
+| Chat UI | Not started | After memory seeding |
+| Session brief job | Not started | Nightly sleeptime agent |
+| Private messaging | Not started | Post-UI |
+| Memory state panel | Not started | Post-UI |
+
+**Scott's MCP bearer token:** `RHcpXjeAJlu_DzhYplsLaUOUSGVrU-gceamJQoXb81Q`
+**Ted's MCP bearer token:** `eVq0eGBoX1rGNatZyaDw8yYW0l4bZ8viGmyxsN1Y8GA`
+
+**Full deployment challenge log:** `~/Developer/han-solo/DEPLOYMENT.md`
+14 challenges documented — wrong Docker org, pg8000 dialect, schema wipe, port override,
+wrong Dockerfile, package naming collision, missing env vars, Letta redirects, embedding config,
+Letta cold-start lazy init, BaseHTTPMiddleware breaking SSE, FastMCP lifespan composition,
+FastMCP DNS rebinding protection. Read before touching the stack.
