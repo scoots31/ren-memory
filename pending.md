@@ -143,4 +143,9 @@ Session 3 complete. Session 4 deferred until v1 core is running.
 **Session 4 — Collaboration Model — deferred until v1 is live**
 - Ownership model, visibility settings UI, key management UI, full nav
 
+**Session 5 — Ren-to-Claude bridge (not yet designed)**
+- Webhook system: Ren initiates work in Claude Code, reports back to chat
+- Anthropic Managed Agents Webhooks (public beta) is the likely foundation
+- Design session needed before any build — maps to module builder session
+
 **Deployment reference:** `~/Developer/han-solo/DEPLOYMENT.md` — 15 challenges logged. Read before touching the stack.
