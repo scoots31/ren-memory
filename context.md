@@ -190,7 +190,7 @@ These don't change session to session — only update when a decision is explici
 | Service | Status | URL / Host |
 |---|---|---|
 | han-solo-db | Live | `dpg-d81724vavr4c73b5afig-a` (internal), PostgreSQL 16, 5GB, Oregon |
-| han-solo-letta | Live | `han-solo-letta.onrender.com`, Letta v0.5.1 |
+| han-solo-letta | Live | `han-solo-letta.onrender.com`, Letta v0.16.7 |
 | pgvector | Enabled | `CREATE EXTENSION vector` run manually |
 
 **GitHub repo:** `scoots31/han-solo` — private, `~/Developer/han-solo` locally
@@ -198,3 +198,12 @@ These don't change session to session — only update when a decision is explici
 **Letta connection fix:** URI must use `postgresql+pg8000://` not `postgresql://` — pg8000 is the driver bundled in the Letta image.
 
 **Next: Phase 2 — MCP server.** Build the Han Solo MCP server — bidirectional, auth wired, typed read/write tools, validation wrapper, phase awareness via project state. Deploy as second web service on Render.
+
+**Letta upgrade notes (2026-05-12):**
+- Upgraded from lettaai/letta (old org, ~v0.5.x) to letta/letta:0.16.7
+- Render service is `env: image` — Dockerfile in han-solo repo is not used. Update imagePath via Render API.
+- LETTA_SERVER_PASSWORD changed to: KTZbsSbNocYbp7a-qhk87RwboYiLcX_W
+- PORT=8283 must be set explicitly — Render injects PORT=10000 by default which breaks health check
+- LETTA_REDIS_HOST=localhost skips internal Redis startup (Redis fails gracefully to noop client)
+- Schema was wiped and recreated fresh (old schema incompatible with v0.16.7 migrations)
+- pgvector extension must be recreated after schema drop: CREATE EXTENSION IF NOT EXISTS vector;
