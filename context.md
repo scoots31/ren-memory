@@ -180,3 +180,21 @@ These don't change session to session — only update when a decision is explici
 - Last Cloudflare deploy: 2026-05-05 (v2.5.0 comms cascade)
 - Last diary entry: 2026-05-09
 - Open framework gaps: discovery gap (exact data inventory for data-heavy products — design session needed)
+
+---
+
+## Han Solo — Infrastructure Status (updated 2026-05-12)
+
+**Phase 1 — COMPLETE**
+
+| Service | Status | URL / Host |
+|---|---|---|
+| han-solo-db | Live | `dpg-d81724vavr4c73b5afig-a` (internal), PostgreSQL 16, 5GB, Oregon |
+| han-solo-letta | Live | `han-solo-letta.onrender.com`, Letta v0.5.1 |
+| pgvector | Enabled | `CREATE EXTENSION vector` run manually |
+
+**GitHub repo:** `scoots31/han-solo` — private, `~/Developer/han-solo` locally
+
+**Letta connection fix:** URI must use `postgresql+pg8000://` not `postgresql://` — pg8000 is the driver bundled in the Letta image.
+
+**Next: Phase 2 — MCP server.** Build the Han Solo MCP server — bidirectional, auth wired, typed read/write tools, validation wrapper, phase awareness via project state. Deploy as second web service on Render.
