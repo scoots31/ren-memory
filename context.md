@@ -197,7 +197,28 @@ These don't change session to session — only update when a decision is explici
 
 **Letta connection fix:** URI must use `postgresql+pg8000://` not `postgresql://` — pg8000 is the driver bundled in the Letta image.
 
-**Next: Phase 2 — MCP server.** Build the Han Solo MCP server — bidirectional, auth wired, typed read/write tools, validation wrapper, phase awareness via project state. Deploy as second web service on Render.
+**Phase 2 — COMPLETE (2026-05-12)**
+
+Han Solo MCP server live at `https://han-solo-mcp.onrender.com/mcp`.
+Render service: `srv-d81lla0sfn5c73fcr780`, Docker-based web service.
+
+**Scott's bearer token:** `RHcpXjeAJlu_DzhYplsLaUOUSGVrU-gceamJQoXb81Q`
+**Ted's bearer token:** `eVq0eGBoX1rGNatZyaDw8yYW0l4bZ8viGmyxsN1Y8GA`
+
+Server wired into Claude Code settings (`~/.claude/settings.json`) as `han-solo` MCP server.
+
+**15 tools live:** read_core_memory, write_core_memory, list_core_memory_blocks, write_signal, search_signals, write_session_summary, get_project_state, check_phase_gate, advance_phase, record_artifact, get_session_brief, write_pending_thoughts, read_portrait, write_portrait, read_all_portraits.
+
+**Key implementation notes:**
+- FastMCP transport_security must be disabled (DNS rebinding check blocks non-localhost hosts with 421)
+- FastMCP's streamable_http_app lifespan must be composed with our custom lifespan (not nested as sub-app)
+- Auth uses raw ASGI middleware, NOT Starlette BaseHTTPMiddleware (which breaks SSE streaming)
+- Ren agent `ren-v1` created in Letta: `agent-44d4a28a-9d66-4aea-b327-2f77b23359ef`
+- Letta embedding config: `anthropic` type, `voyage-3` model, `embedding_dim: 1024`
+- Lazy init for Ren agent ID — if Letta sleeping at MCP startup, agent resolved on first tool call
+- Health shows `degraded` until first tool call when Letta was asleep at startup (expected behavior)
+
+**Next: Phase 3 — seed Ren agent memory** (always_loaded_core, pending_thoughts, portrait blocks, signals).
 
 **Letta upgrade notes (2026-05-12):**
 - Upgraded from lettaai/letta (old org, ~v0.5.x) to letta/letta:0.16.7
