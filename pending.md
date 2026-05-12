@@ -135,6 +135,7 @@ Session 3 complete. Session 4 deferred until v1 core is running.
 - [ ] Ren's memory seeded — ren-memory + MemPalace migrated, notes layer seeded
 - [ ] Session brief — nightly sleeptime job running, brief waiting at session open
 - [ ] Private messaging — @mention (quick) and private thread (sustained)
+- [ ] File/image sharing in chat — upload files, paste screenshots from clipboard, vision input passed to Ren via Letta messages API
 
 **Pending before notes layer schema:**
 - [ ] Ted conversation — his standalone notes product idea. Design notes layer foundation after that conversation.
