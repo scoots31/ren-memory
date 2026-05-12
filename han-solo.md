@@ -696,7 +696,7 @@ Three private channels: Scott↔Ren, Ted↔Ren, Scott↔Ted (no Ren present).
 | Ren agent (ren-v1) | Created | ID: `agent-44d4a28a-9d66-4aea-b327-2f77b23359ef` |
 | Claude Code wiring | Done | `han-solo` server in `~/.claude/settings.json` |
 | Memory seeding | Not started | Phase 3 — next |
-| Chat UI | Not started | After memory seeding |
+| Chat UI | Live (2026-05-12) | `han-solo-mcp.onrender.com/` — chat shell, memory panel, light/dark |
 | Session brief job | Not started | Nightly sleeptime agent |
 | Private messaging | Not started | Post-UI |
 | Memory state panel | Not started | Post-UI |

@@ -131,11 +131,10 @@ Session 3 complete. Session 4 deferred until v1 core is running.
   - [x] Write initial `pending_thoughts` — carry-forward from ren-memory
   - [x] Write first portrait blocks — scott_portrait_forming, ren_portrait_forming
   - [x] Write seed signals — 8 signals in archival memory, Voyage AI embeddings live (2026-05-12)
-- [ ] Chat UI — Scott and Ted in same room, Ren present, identity markers, light/dark mode
+- [x] Chat UI — shipped 2026-05-12. `/` serves chat shell; Ren gold / Scott blue / Ted green identity. Memory panel (3 sections). Light/dark mode. 5s poll for multi-user sync. Deployed to Render via GitHub push.
 - [ ] Ren's memory seeded — ren-memory + MemPalace migrated, notes layer seeded
 - [ ] Session brief — nightly sleeptime job running, brief waiting at session open
 - [ ] Private messaging — @mention (quick) and private thread (sustained)
-- [ ] Memory state panel — collapsible side panel, three sections
 
 **Pending before notes layer schema:**
 - [ ] Ted conversation — his standalone notes product idea. Design notes layer foundation after that conversation.
