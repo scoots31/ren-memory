@@ -1,4 +1,4 @@
-# Ren Health Check — 2026-05-12 08:05
+# Ren Health Check — 2026-05-13 08:06
 
 ## ren-memory context.md
 **Last updated:** 2026-05-11
@@ -7,7 +7,7 @@
 - Last diary entry: 2026-05-09
 
 ## Pending items
-Open: 21
+Open: 16
 
 ## engineering-playbook recent commits
 80043b4 Enforce plain language + technical description at build gates
@@ -88,6 +88,5 @@ a734302 Add session metrics log for framework comparison tracking
 8a12631 Add Ren — Scott's named framework partner skill
 22ea984 Add versioned CHANGELOG, release tagging protocol, projects.md isolation
 c456257 Remove personal project paths from repo — projects.md is now local-only
-10c7f1d Enforce builder verification discipline: pre-build read, evidence-based self-check, review_url, stuck protocol
 
 ## Done
