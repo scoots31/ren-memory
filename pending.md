@@ -133,9 +133,18 @@ Session 3 complete. Session 4 deferred until v1 core is running.
   - [x] Write seed signals — 8 signals in archival memory, Voyage AI embeddings live (2026-05-12)
 - [x] Chat UI — shipped 2026-05-12. `/` serves chat shell; Ren gold / Scott blue / Ted green identity. Memory panel (3 sections). Light/dark mode. 5s poll for multi-user sync. Deployed to Render via GitHub push.
 - [x] Ren's memory seeded — 107 passages: 7 project summaries, ren-memory file chunks, 20 wing_ren drawers, 63 projects drawers (2026-05-12). Notes layer pending Ted conversation.
-- [ ] Session brief — nightly sleeptime job running, brief waiting at session open
+- [x] Session brief — nightly dream script (dream.py) running at 2am via launchd (2026-05-12)
+- [x] Text file sharing — paperclip button, 100KB limit, inline to Ren as code block (2026-05-12)
+- [x] Chat history persistence — rebuilt from Letta on cold start, survives Render restarts (2026-05-12)
+- [x] Mid-session memory visibility — write_core_memory notifies Ren immediately (2026-05-12)
+- [x] Portrait signals — add_portrait_signal tool, appends dated observation + notifies Ren (2026-05-12)
+- [x] archival_memory_search + archival_memory_insert enabled (2026-05-12)
+- [x] web_search + fetch_webpage + run_code enabled (2026-05-12)
+- [x] Letta release check added to nightly dream (2026-05-12)
+- [x] System prompt replaced — Ren's voice, no longer Letta generic template (2026-05-12)
+- [x] Session close-out phrase — "This is the way" wired into always_loaded_core + system prompt (2026-05-12)
+- [ ] Image sharing — deferred until Letta multimodal confirmed working (Letta 0.16.7 returns 502)
 - [ ] Private messaging — @mention (quick) and private thread (sustained)
-- [ ] File/image sharing in chat — upload files, paste screenshots from clipboard, vision input passed to Ren via Letta messages API
 
 **Pending before notes layer schema:**
 - [ ] Ted conversation — his standalone notes product idea. Design notes layer foundation after that conversation.
@@ -148,4 +157,4 @@ Session 3 complete. Session 4 deferred until v1 core is running.
 - Anthropic Managed Agents Webhooks (public beta) is the likely foundation
 - Design session needed before any build — maps to module builder session
 
-**Deployment reference:** `~/Developer/han-solo/DEPLOYMENT.md` — 15 challenges logged. Read before touching the stack.
+**Deployment reference:** `~/Developer/han-solo/DEPLOYMENT.md` — 16 challenges logged. Read before touching the stack.
