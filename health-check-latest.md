@@ -1,4 +1,4 @@
-# Ren Health Check — 2026-05-13 08:06
+# Ren Health Check — 2026-05-14 08:05
 
 ## ren-memory context.md
 **Last updated:** 2026-05-11
@@ -10,6 +10,7 @@
 Open: 16
 
 ## engineering-playbook recent commits
+dd407f8 Change 'governed' to 'guided' on How We Solve Gaps slide
 80043b4 Enforce plain language + technical description at build gates
 462141d Fix backlog section headers — Solo Companion parser requires exact strings
 ef4629a Design library: surface review links, filter options without them
@@ -77,16 +78,5 @@ dcc14d1 Add observability requirements follow-up question to tech-context (v1.3.
 a3585d8 docs: update communications for v1.3.0 framework changes
 9c8e1a9 v1.3.1 — Standardize to-be process map filename convention
 10176a5 v1.3.0 — Companion pass, shared ideas backlog, deployed new cycle
-6cbdeed Log session findings: handoff fix, Bayer LT analysis, new curator work items
-7fc1ed1 Handoff updates at slice Done, not session end
-dfaac6b Add Gift Tracker brief — locked for simulator test run
-6aa6f48 Wire solo-simulator into framework — SL-012 integration complete
-9cc2067 Add solo-simulator skill — brief template and core SKILL.md
-a734302 Add session metrics log for framework comparison tracking
-40194b2 Fix solo-qa: deliverable acceptance section used wrong status
-251b7d1 tech-context — add Runtime section to output template
-8a12631 Add Ren — Scott's named framework partner skill
-22ea984 Add versioned CHANGELOG, release tagging protocol, projects.md isolation
-c456257 Remove personal project paths from repo — projects.md is now local-only
 
 ## Done
