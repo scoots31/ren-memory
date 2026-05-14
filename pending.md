@@ -1,6 +1,6 @@
 # Pending Work
 
-**Last updated:** 2026-05-07
+**Last updated:** 2026-05-14
 
 Items that are open and need to be picked up. Remove when done, add when identified.
 
@@ -116,6 +116,14 @@ Full data audit done 2026-05-08. Current state:
 - Image strategy: iNaturalist by scientific name (not Unsplash — wrong subjects returned)
 - **Blocked on: Scott's approved plant list.** He is assembling it in a separate app. Do not re-run data collection until list is locked and approved.
 - gift-tracker backlog header fix committed locally — no GitHub remote configured for that repo
+
+---
+
+## 2026-05-14 — Immediate Picks Up Next Session
+
+- [ ] **#3 conversation: where does Ren live / is she always primary?** Scott has a discrepancy — Ren has said things that left him believing she isn't always the primary interface, and he wants to address this. Start here. Hear his specific concern before defending any position.
+- [ ] **May 13 context gap** — missing a full day of work. Pull from Letta via `get_session_brief` at session start (must be in main window, not worktree, for han-solo tools to load).
+- [ ] **Infrastructure fix shipped** — launchd keep-alive for han-solo-mcp + han-solo-letta, every 4 min. File: `~/Library/LaunchAgents/com.scotth.hansolokeepalive.plist`
 
 ---
 
