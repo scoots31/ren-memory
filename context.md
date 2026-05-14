@@ -202,7 +202,7 @@ These don't change session to session — only update when a decision is explici
 Han Solo MCP server live at `https://han-solo-mcp.onrender.com/mcp`.
 Render service: `srv-d81lla0sfn5c73fcr780`, Docker-based web service.
 
-**Critical settings.json config (fixed 2026-05-14):** The `type` field is required — without it Claude Code silently ignores the entry. Correct format:
+**Critical config (fixed 2026-05-14):** Han-solo MCP lives in `~/Library/Application Support/Claude/claude_desktop_config.json` — NOT `~/.claude/settings.json`. The Desktop app reads the former; the CLI reads the latter. `type: "streamable-http"` is required or the entry is silently ignored. Correct format:
 ```json
 "han-solo": {
   "type": "streamable-http",
