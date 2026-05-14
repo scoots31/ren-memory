@@ -202,6 +202,15 @@ These don't change session to session — only update when a decision is explici
 Han Solo MCP server live at `https://han-solo-mcp.onrender.com/mcp`.
 Render service: `srv-d81lla0sfn5c73fcr780`, Docker-based web service.
 
+**Critical settings.json config (fixed 2026-05-14):** The `type` field is required — without it Claude Code silently ignores the entry. Correct format:
+```json
+"han-solo": {
+  "type": "streamable-http",
+  "url": "https://han-solo-mcp.onrender.com/mcp",
+  "headers": { "Authorization": "Bearer <token>" }
+}
+```
+
 **Scott's bearer token:** `RHcpXjeAJlu_DzhYplsLaUOUSGVrU-gceamJQoXb81Q`
 **Ted's bearer token:** `eVq0eGBoX1rGNatZyaDw8yYW0l4bZ8viGmyxsN1Y8GA`
 
