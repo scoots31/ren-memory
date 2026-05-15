@@ -1,4 +1,4 @@
-# Ren Health Check — 2026-05-14 08:05
+# Ren Health Check — 2026-05-15 08:05
 
 ## ren-memory context.md
 **Last updated:** 2026-05-11
@@ -7,9 +7,11 @@
 - Last diary entry: 2026-05-09
 
 ## Pending items
-Open: 16
+Open: 19
 
 ## engineering-playbook recent commits
+5e9cbef Remove all Ren references from communications docs
+16c93d3 Update slide 5 title — framework as catalyst and amplifier to the team
 dd407f8 Change 'governed' to 'guided' on How We Solve Gaps slide
 80043b4 Enforce plain language + technical description at build gates
 462141d Fix backlog section headers — Solo Companion parser requires exact strings
@@ -67,16 +69,5 @@ b80afef Plain language audit — remove skill names and internal jargon from sol
 c7679ab Update comms docs and CHANGELOG for v1.3.1–v1.4.1 changes
 de38992 Quality contract scaffold + security check gate (second pass)
 1d3e88d Add quality contract to slice definition and code review
-e21a10b v1.3.2–1.3.4: verbatim quote, language audit, session signals
-e108219 Log session ideas to shared backlog — 2026-04-30
-87e8dd7 Add handoff staleness hook to onboard Check 5 (v1.3.2)
-d185ea6 Revert: remove handoff hook from engineering-playbook
-94b7990 Add Stop hook: handoff staleness check for all contributors
-dcc14d1 Add observability requirements follow-up question to tech-context (v1.3.1 patch)
-01abb6e Add observability tool decision to tech-context (v1.3.1)
-2631b98 fix: correct Session Hygiene text color in skills reference
-a3585d8 docs: update communications for v1.3.0 framework changes
-9c8e1a9 v1.3.1 — Standardize to-be process map filename convention
-10176a5 v1.3.0 — Companion pass, shared ideas backlog, deployed new cycle
 
 ## Done
