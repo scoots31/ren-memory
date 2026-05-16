@@ -1,4 +1,4 @@
-# Ren Health Check — 2026-05-15 08:05
+# Ren Health Check — 2026-05-16 08:05
 
 ## ren-memory context.md
 **Last updated:** 2026-05-11
@@ -48,26 +48,5 @@ a17161f Add client-context-design skill, clients registry, and design-sprint cli
 3d7d7f7 Add slice quality checks to prd-to-plan and solo-build (v1.8.0)
 861ef35 v1.8.0 — Project-level metrics collection
 27a685f v1.7.0 — Automated testing, CI/CD pipeline integration, seven deployment paths
-2c5d541 Add current-phase.md format to autopilot SKILL.md — companion integration
-23d3ee5 Add autopilot to phase skills list in Cursor user rules template
-19c0fa7 Fill missing comms coverage — v1.5.2, v1.5.3, v1.5.4 + guide updates
-fe21f2a Update comms docs for autopilot — guide-build, process-map, blog
-79f9969 Add autopilot skill — autonomous build mode (v1.6.0)
-7e249d4 Mark retrospective idea Done — 2026-05-01
-3aaeca9 Retrospective redesign — session-present listening + cross-machine retro log
-e2eae1a Solo-build: deliverable-boundary session triggers
-288e319 Mark deploy auto-detect idea done-by-proxy
-8e9a999 Design sprint: add element naming pass after structure pass
-88885b3 Design sprint: wireframe-first round one (on-ramp 1 and 3 only)
-3d942be Update comms docs and release blog for v1.4.2, v1.5.0, v1.5.1
-35e336f Add decisions log entry for Figma fidelity rules cascade
-8387c30 Add Figma fidelity rules and interactive element classification
-865fc6e Add decisions log entry for rollback protocol (2026-05-01)
-c37e270 Add rollback protocol — records-spec, solo-build, qa-triage
-0631218 Add decisions log entry for plain language audit (2026-05-01)
-b80afef Plain language audit — remove skill names and internal jargon from solo-facing output
-c7679ab Update comms docs and CHANGELOG for v1.3.1–v1.4.1 changes
-de38992 Quality contract scaffold + security check gate (second pass)
-1d3e88d Add quality contract to slice definition and code review
 
 ## Done
