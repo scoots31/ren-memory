@@ -1,4 +1,4 @@
-# Ren Health Check — 2026-05-16 08:05
+# Ren Health Check — 2026-05-17 08:05
 
 ## ren-memory context.md
 **Last updated:** 2026-05-11
@@ -43,10 +43,5 @@ ca7b0bf v2.0.0 — comms cascade
 ce0e346 v2.0.0 — Comms cascade sub-agent + Ren memory infrastructure
 f31df20 ren: read curator-summary.md instead of full curator-context by default
 e453b78 ren: fetch ren-memory repo at session start, lazy-load curator-context
-a17161f Add client-context-design skill, clients registry, and design-sprint client context hook
-08be7be v1.9.0 — Solo Companion Search and Capture
-3d7d7f7 Add slice quality checks to prd-to-plan and solo-build (v1.8.0)
-861ef35 v1.8.0 — Project-level metrics collection
-27a685f v1.7.0 — Automated testing, CI/CD pipeline integration, seven deployment paths
 
 ## Done
