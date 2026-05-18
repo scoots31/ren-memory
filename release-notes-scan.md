@@ -1,14 +1,14 @@
 # Anthropic Release Notes — Framework Scan
 
-**last_reviewed:** 2026-05-11
-**scan_run:** 2026-05-11
+**last_reviewed:** 2026-05-18
+**scan_run:** 2026-05-18
 **framework_version_at_scan:** v2.7.0
 
 ---
 
-## New Items — 2026-05-11 scan
+## New Items — 2026-05-18 scan
 
-One dated entry since last scan (2026-05-05): May 6, 2026. Four sub-items, all in the Managed Agents track. These formally confirm the public beta status of capabilities Scott already logged from X/social on 2026-05-07 (see context.md "Managed Agents — Han Solo Infrastructure Layer"). Treated here from the perspective of framework impact.
+One dated entry since last scan (2026-05-11): May 12, 2026 — Fast mode for Opus 4.7.
 
 ### Act
 
@@ -16,13 +16,11 @@ None this week.
 
 ### Watch
 
-- **Multiagent sessions + Outcomes — public beta (2026-05-06)** — Already mapped to Han Solo as the orchestration and quality-contract layers. Scott's call: when to start a Han Solo design-build session that uses these capabilities directly vs continuing to use Claude Code's local Agent tool inside the framework. No framework skill changes needed today.
-- **Webhooks for Managed Agents — supported (2026-05-06)** — Already identified as the path to event-driven Solo Companion updates (vs current polling). Scott's call: schedule a Solo Companion architecture session to spec the migration off polling, or defer until Han Solo runtime is in place.
+- **Fast mode now supports Claude Opus 4.7 — research preview (2026-05-12)** — API-level fast mode opens to Opus 4.7 at premium pricing via `fast-mode-2026-02-01` beta header and waitlist. Note that Claude Code's `/fast` toggle (currently Opus 4.6 only per `~/.claude/CLAUDE.md`) is a separate integration; this release does not automatically extend `/fast` to 4.7. Scott's call: join the API waitlist if fast generation on Opus 4.7 matters for any direct API work (no framework skill currently consumes it).
 
 ### Skip
 
-- **Vault credential background refresh for mcp_oauth (2026-05-06)** — No current framework integration with Managed Agents vault; affects only consumers building on the Managed Agents runtime.
-- **Filtering/sorting for sessions and events (2026-05-06)** — API quality-of-life on Managed Agents endpoints; no framework consumer today.
+None this week.
 
 ---
 
