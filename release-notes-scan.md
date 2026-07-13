@@ -1,36 +1,35 @@
 # Anthropic Release Notes — Framework Scan
 
-**last_reviewed:** 2026-07-01
-**scan_run:** 2026-07-06
+**last_reviewed:** 2026-07-10
+**scan_run:** 2026-07-13
 **framework_version_at_scan:** v2.7.0
 
 ---
 
-## New Items — 2026-07-06 scan
+## New Items — 2026-07-13 scan
 
-Eight new items across the June 29 – July 1 window (the June 26 rate-limit entry was assessed last scan). The dominant theme is a model-landscape shift: Claude Sonnet 5 launched, Fable 5 / Mythos 5 access was restored, and Opus 4.6 fast mode was removed — all of which feed the still-pending model-reference sweep. `last_reviewed` is stamped to the newest assessed item (2026-07-01), not the run date, per the standing correction, so any item published July 2–6 stays "new" for the next scan.
+Four new items in the July 2–10 window. All Skip — no framework or Han Solo consumer this scan. The dominant thread is Managed Agents memory-store plumbing (the `agent-memory-2026-07-22` beta header), which stays inert for us because Han Solo runs on Letta rather than the Managed Agents runtime. `last_reviewed` is stamped to the newest assessed item (2026-07-10), not the run date, per the standing correction, so any item published July 11–13 stays "new" for the next scan.
 
 ### Act
 
-- **Claude Sonnet 5 launched — `claude-sonnet-5` (2026-06-30)** — Highest-priority framework input this scan: the pending model-reference sweep must now evaluate Sonnet 5 (1M context, 128k output, introductory $2/$10 through Aug 31) as a candidate default build model and Han Solo coordinator, and three breaking behavior changes need a config check across framework skills and Han Solo/Letta — manual extended thinking (`thinking: {budget_tokens}`) now returns 400, non-default sampling params (`temperature`/`top_p`/`top_k`) now return 400, and adaptive thinking is default-on; also the new tokenizer produces ~30% more tokens for the same text, which affects the context-ceiling math in Context Assembly.
+None this week.
 
 ### Watch
 
-- **Claude Fable 5 / Mythos 5 access restored (2026-07-01)** — The pending sweep was leaning toward Fable 5 as the framework's default build model; with Fable 5 back and Sonnet 5 now available, this is Scott's call on which model becomes the recommended default.
-- **Managed Agents webhooks now cover deployment lifecycle (2026-06-30)** — Extends the event-driven path already flagged for Solo Companion (session events) to agent-version-published, deployment-paused, and failed-scheduled-run events without polling; Scott's call on whether Han Solo adopts the Managed Agents runtime to use it (Han Solo currently runs on Letta).
-- **Managed Agents per-session config override — `agent_with_overrides` (2026-06-30)** — Override model, system prompt, tools, MCP servers, or skills for a single session without changing the agent; could shape Han Solo's multiagent design (one agent, per-session swaps), a direction decision rather than a framework skill change.
+None this week.
 
 ### Skip
 
-- **Fast mode removed for Claude Opus 4.6 (2026-06-29)** — Degrades gracefully (runs at standard speed and pricing, no error, `usage.speed` reports actual); the pending fast-mode/model-reference sweep already covers Opus 4.7, which *does* error on July 24, so no new action beyond finishing that sweep.
-- **Managed Agents event deltas (2026-06-30)** — Streaming preview of agent message text before the complete event arrives; no framework or Han Solo consumer, since Han Solo runs on Letta rather than the Managed Agents runtime.
-- **Managed Agents backward pagination for listing sessions (2026-06-30)** — `prev_page` cursor on `GET /v1/sessions`; API convenience with no framework consumer.
-- **Managed Agents vault `injection_location` for env-var credentials (2026-06-30)** — Controls whether a credential is injected into outbound headers, body, or both; Han Solo manages its own secrets on Render, so no consumer.
+- **CMEK content preservation docs expanded — reason codes and event payload (2026-07-10)** — Enterprise CMEK / Access Transparency documentation change (`policy_violation_investigation`, `csae_report` reason codes); Han Solo manages its own data on Render and is not on CMEK, so no framework or Han Solo consumer.
+- **API key expiration setting in the Console (2026-07-08)** — Optional Console convenience to set an expiry when creating an API/Admin key; existing keys are unaffected and the framework's BYOK model doesn't provision Console keys programmatically, so no skill change — worth a mental note only that a future expiring sponsored key could silently break a deployed agent.
+- **`agent-memory-2026-07-22` beta header changes memory-store listing behavior (2026-07-02)** — Stable server-defined ordering, restricted `depth`, whole-segment `path_prefix` on Managed Agents `GET /memory_stores/{id}/memories`; Han Solo runs on Letta, not the Managed Agents runtime, so there is no memory-store consumer to migrate.
+- **SDKs now send `agent-memory-2026-07-22` on memory-store calls (2026-07-02)** — Python/TS/Go/Java/Ruby/PHP/C#/CLI SDK version bumps swapping the beta header on memory-store endpoints; SDK maintenance with no framework consumer for the same reason as above.
 
 ---
 
 ## Previous Scans
 
+- **2026-07-06** — framework v2.7.0 — 1 Act / 3 Watch / 4 Skip — Claude Sonnet 5 launch (`claude-sonnet-5`, 1M context, $2/$10 intro): pending model-reference sweep must evaluate it as default build model + Han Solo coordinator, plus three breaking behavior changes (manual extended thinking → 400, non-default sampling params → 400, adaptive thinking default-on) and a new tokenizer producing ~30% more tokens that reshapes the Context Assembly ceiling math; Fable 5/Mythos 5 access restored and three Managed Agents items (webhooks lifecycle, per-session config override, fast-mode removal) as Watch/Skip.
 - **2026-06-29** — framework v2.7.0 — 1 Act / 0 Watch / 2 Skip — Opus 4.7 fast-mode deprecation (errors July 24; opus-4-7 is Han Solo's documented coordinator — fold fast-mode pin check into the pending Opus 4.8 sweep) + rate-limit tier consolidation and code-execution `_20260120` both Skip; established that `last_reviewed` tracks the newest assessed item.
 - **2026-06-22** — framework v2.7.0 — 0 Act / 0 Watch / 3 Skip — no items in the June 16–22 window; retroactively assessed the June 11 (×2) and June 15 entries (all Skip), and established the rule that `last_reviewed` tracks the newest assessed item, not the run date.
 - **2026-06-15** — framework v2.7.0 — 1 Act / 4 Watch / 9 Skip — Claude Fable 5 launch (model-reference sweep across skills + Han Solo config, land on Fable 5 as default build model, fold in pending Opus 4.8 sweep) + Managed Agents scheduled deployments / vault env-var credentials / Fable 5 fallbacks + ZDR constraint flagged for Han Solo.
