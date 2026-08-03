@@ -1,36 +1,42 @@
 # Anthropic Release Notes — Framework Scan
 
 **last_reviewed:** 2026-07-24
-**scan_run:** 2026-07-27
+**scan_run:** 2026-08-03
 **framework_version_at_scan:** v2.7.0 (from context.md:4 — curator-summary.md still reads v2.6.0 and has been stale since 2026-05-05)
 
 ---
 
-## New Items — 2026-07-27 scan
+## New Items — 2026-08-03 scan
 
-Three dated entries in the window after 2026-07-15: July 17, July 22, July 24. The July 24 entry is a major model launch — Claude Opus 5 — and it also lands the Opus 4.7 fast-mode removal that the 2026-06-29 scan flagged as a future deadline. Per the standing correction, `last_reviewed` is stamped to the newest assessed item (2026-07-24), not the run date.
+No new items this week. The newest dated entry on the platform release notes page is still **July 24, 2026** (the Claude Opus 5 launch), which is exactly where the last scan stopped — nothing has been published in the ten days since. Per the standing rule, `last_reviewed` stays at 2026-07-24 (the newest assessed item) rather than advancing to the run date.
+
+The fallback URL (`docs.anthropic.com/en/release-notes/overview`) now 301-redirects to `platform.claude.com/docs/en/release-notes/overview` — same content, one source. Noting it so future scans don't treat the redirect as a fetch failure.
 
 ### Act
 
-- **Claude Opus 5 launched — `claude-opus-5` (2026-07-24)** — Step-change over Opus 4.8: 1M token context as both default and maximum, 128k max output, thinking on by default, same $5/$25 per MTok pricing; this forces the model-reference sweep that has been pending since the Fable 5 and Opus 4.8 launches — every skill that names a model, plus Han Solo's coordinator config, needs to be evaluated against Opus 5 as the new default coordinator/build model.
-- **Fast mode removed for Claude Opus 4.7 (2026-07-24)** — The deprecation flagged in the 2026-06-29 scan has landed: `claude-opus-4-7` with `speed: "fast"` now returns an error with no fallback to standard speed, and ren-memory documents `claude-opus-4-7` as the coordinator model reference in two places (context.md:140, han-solo.md:82) — any config pinning fast mode on that model is now hard-broken and must be checked as the first step of the Opus 5 sweep.
-- **Thinking-disable restriction and the effort ladder on Opus 5 (2026-07-24)** — Breaking change from Opus 4.8: `thinking: {"type": "disabled"}` returns a 400 at effort `xhigh` or `max`, and effort (`low` through `max`) is now the primary steering control — any skill or Han Solo agent config that disables thinking or sets an effort level needs a compatibility pass as part of the same sweep.
+None this week.
 
 ### Watch
 
-- **Server-side fallback gains a `"default"` mode (2026-07-24)** — The `fallbacks` parameter can now apply Anthropic's recommended fallback models by refusal category behind the `server-side-fallback-2026-07-01` beta header; Han Solo calls the Claude API directly from Render (han-solo.md:558), so this is a real resilience option — Scott's call whether to run a beta header in a production path.
-- **Legacy Workbench sunset, access ends 2026-08-17 (2026-07-17)** — Saved prompts, variables, and evals are not carried over to the new Workbench and must be exported before the cutoff; this is not a framework change, but if Scott has anything saved there it is a dated decision with three weeks left on the clock.
+None this week.
 
 ### Skip
 
-- **Experimental prompt tools APIs retired 2026-08-17 (2026-07-17)** — `/v1/experimental/generate_prompt`, `improve_prompt`, and `templatize_prompt` will error after removal; no framework skill or Han Solo path calls these endpoints, so nothing to migrate.
-- **Claude Managed Agents — effort in agent model config, environment and memory-store webhooks, `initial_events` session seeding, optional `version` on update, thread-level event deltas (2026-07-22, five items)** — All five are Managed Agents runtime plumbing; Han Solo runs on Letta, not the Managed Agents runtime, so there is no consumer — same rationale as the 2026-07-13 and 2026-07-06 scans.
-- **Mid-conversation tool changes, beta (2026-07-24)** — Adding or removing tools between turns while preserving the prompt cache, behind `mid-conversation-tool-changes-2026-07-01`; Han Solo's tool set is defined per-agent in Letta rather than swapped mid-conversation, and no other consumer was identified — no skill change.
+None this week.
+
+---
+
+## Carry-Forward — dated items still open
+
+- **Legacy Workbench sunset — access ends 2026-08-17 (raised 2026-07-17)** — two weeks left. Saved prompts, variables, and evals do not carry over to the new Workbench and must be exported before the cutoff. Still Scott's call, still unresolved.
+- **Experimental prompt tools APIs retired 2026-08-17** — same date, still assessed as Skip; no framework skill or Han Solo path calls those endpoints.
+- **Opus 5 model-reference sweep (raised 2026-07-24, Act)** — still the open framework item: every skill that names a model, plus Han Solo's coordinator config, needs evaluation against Opus 5, including the now-hard-broken `claude-opus-4-7` + `speed: "fast"` pin (context.md:140, han-solo.md:82) and the thinking-disable / effort-ladder compatibility pass.
 
 ---
 
 ## Previous Scans
 
+- **2026-07-27** — framework v2.7.0 — 3 Act / 2 Watch / 3 Skip — Claude Opus 5 launch (`claude-opus-5`, 1M context default and max, 128k output, thinking on by default, $5/$25) forces the long-pending model-reference sweep; Opus 4.7 fast-mode removal landed and hard-breaks any config pinning it; thinking-disable now 400s at effort `xhigh`/`max`; server-side fallback `"default"` mode and the Workbench sunset as Watch.
 - **2026-07-20** — framework v2.7.0 — 0 Act / 1 Watch / 2 Skip — no framework consumer this scan; Dreams research preview gaining Fable 5 / Sonnet 5 support raised as Scott's call against the Letta sleeptime path; mid-conversation system messages on Fable 5/Mythos 5 and the Claude Enterprise Admin API both Skip.
 - **2026-07-13** — framework v2.7.0 — 0 Act / 0 Watch / 4 Skip — no framework consumer this scan; dominant thread was Managed Agents memory-store plumbing (`agent-memory-2026-07-22` beta header) which stays inert because Han Solo runs on Letta, not the Managed Agents runtime; CMEK content-preservation docs and Console API-key expiration both Skip.
 - **2026-07-06** — framework v2.7.0 — 1 Act / 3 Watch / 4 Skip — Claude Sonnet 5 launch (`claude-sonnet-5`, 1M context, $2/$10 intro): pending model-reference sweep must evaluate it as default build model + Han Solo coordinator, plus three breaking behavior changes (manual extended thinking → 400, non-default sampling params → 400, adaptive thinking default-on) and a new tokenizer producing ~30% more tokens that reshapes the Context Assembly ceiling math; Fable 5/Mythos 5 access restored and three Managed Agents items (webhooks lifecycle, per-session config override, fast-mode removal) as Watch/Skip.
